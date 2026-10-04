@@ -166,8 +166,13 @@
 <div id="app"></div>
 <script src="deck.js"></script>
 <script>
-const INTRO_DAYS = 45;
-const COURSE_DAYS = 60;
+const NEW_PER_DAY = 16;
+const CONSOLIDATION_DAYS = 15;
+function courseShape() {
+  const total = (typeof DECK !== "undefined" && DECK.cards) ? DECK.cards.length : 1;
+  const introDays = Math.max(1, Math.ceil(total / NEW_PER_DAY));
+  return { introDays, courseDays: introDays + CONSOLIDATION_DAYS };
+}
 const REVIEW_CAP = 70;
 const SESSION_CAP = 90;
 const KEY = "fr-sentence-v1";
@@ -274,20 +279,22 @@ function plan(p, today = dateKey()) {
     if (s.reps >= 4 && s.iv >= 21) known++;
     if (s.due && s.due <= today && s.intro !== today) dueCount++;
   }
+  const shape = courseShape();
   const remainingNew = total - introduced;
-  const base = Math.ceil(total / INTRO_DAYS);
-  const expectedBefore = dayNum <= 1 ? 0 : Math.min(total, Math.ceil(total * Math.min(dayNum - 1, INTRO_DAYS) / INTRO_DAYS));
+  const base = NEW_PER_DAY;
+  const expectedBefore = dayNum <= 1 ? 0 : Math.min(total, Math.min(dayNum - 1, shape.introDays) * NEW_PER_DAY);
   const behind = Math.max(0, expectedBefore - (introduced - introducedToday));
   let newTarget;
   if (remainingNew === 0) newTarget = 0;
-  else if (dayNum <= INTRO_DAYS) newTarget = Math.min(remainingNew, base + Math.min(behind, base), 24);
+  else if (dayNum <= shape.introDays) newTarget = Math.min(remainingNew, base + Math.min(behind, base), 24);
   else newTarget = Math.min(remainingNew, 24);
   const stillNew = Math.max(0, newTarget - introducedToday);
-  const deadline = addDays(p.started, COURSE_DAYS - 1);
+  const deadline = addDays(p.started, shape.courseDays - 1);
   const daysLeft = daysBetween(today, deadline);
   return {
     total, dayNum, introduced, introducedToday, remainingNew, steady, known,
-    dueCount, base, behind, newTarget, stillNew, deadline, daysLeft, today
+    dueCount, base, behind, newTarget, stillNew, deadline, daysLeft, today,
+    introDays: shape.introDays, courseDays: shape.courseDays
   };
 }
 
@@ -384,7 +391,7 @@ function shell(body) {
       <div class="brand">法语句子背词<span>${escapeHtml(DECK.books)}</span></div>
       <div class="nav">
         <button data-go="home" class="${view === "home" || view === "study" || view === "done" ? "on" : ""}">今天</button>
-        <button data-go="plan" class="${view === "plan" ? "on" : ""}">60 天</button>
+        <button data-go="plan" class="${view === "plan" ? "on" : ""}">${courseShape().courseDays} 天</button>
         <button data-go="grammar" class="${view === "grammar" ? "on" : ""}">语法</button>
         <button data-go="list" class="${view === "list" ? "on" : ""}">词表</button>
       </div>
@@ -400,7 +407,7 @@ function renderHome() {
   let pushClass = "push";
   let push;
   if (info.introduced === 0 && info.dayNum === 1) {
-    push = `从今天开始，到 ${fmt(info.deadline)}。前 45 天每天大约 ${info.base} 个新词，后 15 天只复习。今天 ${built.newN} 个新句子${built.reviewN ? "，" + built.reviewN + " 个复习" : ""}。`;
+    push = `从今天开始，到 ${fmt(info.deadline)}。前 ${info.introDays} 天每天大约 ${info.base} 个新词，后 ${CONSOLIDATION_DAYS} 天只复习。今天 ${built.newN} 个新句子${built.reviewN ? "，" + built.reviewN + " 个复习" : ""}。`;
   } else if (info.remainingNew === 0 && info.dueCount === 0) {
     pushClass = "push ok";
     push = "今天没有到期的句子。可以去词表里抽查，或者休息。";
@@ -410,16 +417,18 @@ function renderHome() {
   } else if (late && info.remainingNew > 0) {
     pushClass = "push warn";
     push = `原定 ${fmt(info.deadline)} 学完，这一天已经过了。还剩 ${info.remainingNew} 个新词，今天先学 ${built.newN} 个。`;
-  } else if (info.dayNum > INTRO_DAYS && info.remainingNew === 0) {
+  } else if (info.dayNum > info.introDays && info.remainingNew === 0) {
     pushClass = "push ok";
     push = `新词已经全部见过。从现在到 ${fmt(info.deadline)} 只复习，把句子稳住。今天 ${built.reviewN} 个到期。`;
   } else {
-    push = `第 ${info.dayNum} 天 / ${COURSE_DAYS}。今天 ${built.newN} 个新句子，${built.reviewN} 个复习。截止 ${fmt(info.deadline)}。`;
+    push = `第 ${info.dayNum} 天 / ${info.courseDays}。今天 ${built.newN} 个新句子，${built.reviewN} 个复习。截止 ${fmt(info.deadline)}。`;
   }
   if (debt > 0) push += ` 复习还积压 ${debt} 张，做完这组之后可以再来一组。`;
 
   const units = [];
-  for (const book of ["A1", "A2"]) {
+  const bookOrder = [];
+  for (const lesson of lessons()) if (!bookOrder.includes(lesson.book)) bookOrder.push(lesson.book);
+  for (const book of bookOrder) {
     const rows = [];
     const ls = lessons().filter(l => l.book === book);
     const unitIds = [...new Set(ls.map(l => l.unit))];
@@ -450,7 +459,7 @@ function renderHome() {
       ${debt > 0 && !canStart ? "" : ""}
       <button class="btn" id="extra" ${info.dueCount > 0 && info.stillNew === 0 ? "" : "disabled"}>再复习一组</button>
     </div>
-    <p class="small">句子按《你好！法语》1–2 册各课的词和语法新写，不是课文原句。A1 的动词变位和阴阳性，对照了《欧标法语初级 A1 知识点》。</p>
+    <p class="small">句子按《你好！法语》1–2 册和 Édito A2、B1、B2 各课的词和语法新写，不是课文原句。已经学过的词不会重复出现。</p>
     <div class="grid2">${units.join("")}</div>
   `);
 }
@@ -631,9 +640,8 @@ function renderList() {
     <p class="lead">按课排列，句子里标出要会的那个词。这里只供查阅，不算打卡。</p>
     <div class="filters">
       <select id="bookf">
-        <option value="all" ${book === "all" ? "selected" : ""}>A1 + A2</option>
-        <option value="A1" ${book === "A1" ? "selected" : ""}>A1</option>
-        <option value="A2" ${book === "A2" ? "selected" : ""}>A2</option>
+        <option value="all" ${book === "all" ? "selected" : ""}>全部</option>
+        ${[...new Set(lessons().map(l => l.book))].map(b => `<option value="${escapeHtml(b)}" ${book === b ? "selected" : ""}>${escapeHtml(b)}</option>`).join("")}
       </select>
       <select id="lessonf"><option value="all">全部课</option>${opts}</select>
       <input id="q" placeholder="搜法语或英文" value="${escapeHtml(q)}">
@@ -661,7 +669,7 @@ function renderGrammar() {
 function renderPlan() {
   const info = plan(S);
   const cells = [];
-  for (let i = 0; i < COURSE_DAYS; i++) {
+  for (let i = 0; i < info.courseDays; i++) {
     const key = addDays(S.started, i);
     const done = S.days[key]?.done;
     const isToday = key === dateKey();
@@ -672,8 +680,8 @@ function renderPlan() {
   }
   const dayLog = S.days[dateKey()];
   return shell(`
-    <h1>60 天</h1>
-    <p class="lead">${fmt(S.started)} 开始，${fmt(info.deadline)} 结束。前 45 天引入新词，后 15 天巩固。深色是打卡完成的日子，红底是过去了但没做完的日子。</p>
+    <h1>${info.courseDays} 天</h1>
+    <p class="lead">${fmt(S.started)} 开始，${fmt(info.deadline)} 结束。前 ${info.introDays} 天引入新词，每天约 ${NEW_PER_DAY} 个，后 ${CONSOLIDATION_DAYS} 天巩固。深色是打卡完成的日子，红底是过去了但没做完的日子。</p>
     <div class="daygrid">${cells.join("")}</div>
     <div class="row" style="margin-top:22px">
       <div class="stat"><b>${info.dayNum}</b><i>今天是第几天</i></div>
@@ -683,14 +691,14 @@ function renderPlan() {
     <h2 style="margin-top:28px">怎么算学会</h2>
     <ul class="clean">
       <li>见过：这个词在句子里出现过一次。</li>
-      <li>稳住：认对至少 3 次，并且间隔已经到 7 天。这是 60 天里要推到的状态。</li>
+      <li>稳住：认对至少 3 次，并且间隔已经到 7 天。这是整个排期里要推到的状态。</li>
       <li>掌握：间隔到了 21 天。第 45 天之后才遇到的词，两个月内来不及走到这一档，这是正常的。</li>
     </ul>
     <p class="small">答对后，间隔大约是 1 天、3 天，然后按记忆情况拉长，最长 45 天。答错会在这组里很快再出现，并回到明天。</p>
     <h2 style="margin-top:28px">提醒和备份</h2>
     <div class="field" style="display:flex;gap:8px;flex-wrap:wrap;align-items:center">
       <label class="small">每天提醒（写入日历）<input id="hour" type="number" min="6" max="22" value="${S.hour}" style="width:64px;margin-left:6px"></label>
-      <button class="btn" id="ics">下载 60 天日历</button>
+      <button class="btn" id="ics">下载日程到日历</button>
       <button class="btn" id="export">导出进度</button>
       <label class="btn">导入进度<input id="import" type="file" accept="application/json" class="hidden"></label>
       <button class="btn" id="reset">清空重来</button>
@@ -997,7 +1005,8 @@ render = function () {
 function downloadIcs() {
   const hour = String(S.hour).padStart(2, "0");
   const lines = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//fr-sentences//CN", "CALSCALE:GREGORIAN"];
-  for (let i = 0; i < COURSE_DAYS; i++) {
+  const span = courseShape().courseDays;
+  for (let i = 0; i < span; i++) {
     const key = addDays(S.started, i).replace(/-/g, "");
     const stamp = key + "T" + hour + "0000";
     const endH = String(Math.min(23, S.hour + 1)).padStart(2, "0");
@@ -1014,7 +1023,7 @@ function downloadIcs() {
   const blob = new Blob([lines.join("\r\n")], { type: "text/calendar" });
   const a = document.createElement("a");
   a.href = URL.createObjectURL(blob);
-  a.download = "法语句子背词_60天.ics";
+  a.download = "法语句子背词_日程.ics";
   a.click();
 }
 function exportProgress() {

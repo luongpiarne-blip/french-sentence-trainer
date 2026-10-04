@@ -1,5 +1,5 @@
 window.DECK = {
-  "books": "《你好！法语》1 A1 · 2 A2",
+  "books": "《你好！法语》A1–A2 · Édito A2 · B1 · B2",
   "lessons": [
     {
       "id": "a1-01",
@@ -1942,6 +1942,978 @@ window.DECK = {
           "fr": "L'égalité compte pour moi.",
           "zh": "平等对我很重要。",
           "en": "Equality matters to me."
+        }
+      ]
+    },
+    {
+      "id": "ed-a2-01",
+      "book": "Édito A2",
+      "unit": 1,
+      "unitFr": "C'est la vie !",
+      "unitZh": "生活就是这样",
+      "n": 1,
+      "title": "C'est la vie !",
+      "titleZh": "生活就是这样",
+      "grammarTitle": "否定和休闲画像",
+      "grammar": [
+        "ne...rien / ne...personne 表示什么也不、谁也不。动词仍用肯定句的变位。",
+        "复合过去时可以用来讲一次已经发生的活动。空白是这课的新词。"
+      ],
+      "examples": [
+        {
+          "fr": "Le chanteur ne rate rien.",
+          "en": "The singer doesn't miss a thing.",
+          "zh": "The singer doesn't miss a thing."
+        },
+        {
+          "fr": "Le loisir du dimanche, c'est la pétanque.",
+          "en": "Sunday leisure here is pétanque.",
+          "zh": "Sunday leisure here is pétanque."
+        }
+      ]
+    },
+    {
+      "id": "ed-a2-02",
+      "book": "Édito A2",
+      "unit": 2,
+      "unitFr": "Souvenirs, souvenirs",
+      "unitZh": "回忆",
+      "n": 2,
+      "title": "Souvenirs, souvenirs",
+      "titleZh": "回忆",
+      "grammarTitle": "未完成过去时和记忆",
+      "grammar": [
+        "未完成过去时讲过去持续的状态或习惯。突发的一件事才用复合过去时。",
+        "y 代替地点，en 代替 de + 名词。空白仍是新词。"
+      ],
+      "examples": [
+        {
+          "fr": "Ce paysage me reste en mémoire.",
+          "en": "This landscape stays in my memory.",
+          "zh": "This landscape stays in my memory."
+        },
+        {
+          "fr": "J'avais la nostalgie de cette colline.",
+          "en": "I missed that hill.",
+          "zh": "I missed that hill."
+        }
+      ]
+    },
+    {
+      "id": "ed-a2-03",
+      "book": "Édito A2",
+      "unit": 3,
+      "unitFr": "À la recherche d'un toit",
+      "unitZh": "找住处",
+      "n": 3,
+      "title": "À la recherche d'un toit",
+      "titleZh": "找住处",
+      "grammarTitle": "关系代词和住房",
+      "grammar": [
+        "qui 代替主语，que 代替宾语，où 代替地点。",
+        "比较级 plus...que 可以比较两套房子。空白是住房新词。"
+      ],
+      "examples": [
+        {
+          "fr": "Le colocataire qui arrive paie la caution.",
+          "en": "The flatmate who is moving in pays the deposit.",
+          "zh": "The flatmate who is moving in pays the deposit."
+        },
+        {
+          "fr": "L'ascenseur est plus pratique que l'escalier.",
+          "en": "The lift is more practical than the stairs.",
+          "zh": "The lift is more practical than the stairs."
+        }
+      ]
+    },
+    {
+      "id": "ed-a2-04",
+      "book": "Édito A2",
+      "unit": 4,
+      "unitFr": "On n'arrête pas le progrès",
+      "unitZh": "进步不停",
+      "n": 4,
+      "title": "On n'arrête pas le progrès",
+      "titleZh": "进步不停",
+      "grammarTitle": "简单将来时和 si",
+      "grammar": [
+        "简单将来时：词尾 -ai, -as, -a, -ons, -ez, -ont。",
+        "si + 现在时，主句可以用将来时。空白是科技新词。"
+      ],
+      "examples": [
+        {
+          "fr": "Ce logiciel changera notre façon de travailler.",
+          "en": "This software will change how we work.",
+          "zh": "This software will change how we work."
+        },
+        {
+          "fr": "Si la batterie tombe, le robot s'arrête.",
+          "en": "If the battery dies, the robot stops.",
+          "zh": "If the battery dies, the robot stops."
+        }
+      ]
+    },
+    {
+      "id": "ed-a2-05",
+      "book": "Édito A2",
+      "unit": 5,
+      "unitFr": "En forme ?",
+      "unitZh": "身体好吗",
+      "n": 5,
+      "title": "En forme ?",
+      "titleZh": "身体好吗",
+      "grammarTitle": "虚拟式：必须和禁止",
+      "grammar": [
+        "il faut que / il est nécessaire que 后面用虚拟式。",
+        "否定命令式表示禁止。空白是健康新词，不是已经学过的动词。"
+      ],
+      "examples": [
+        {
+          "fr": "Il faut que cette allergie soit suivie.",
+          "en": "This allergy needs to be monitored.",
+          "zh": "This allergy needs to be monitored."
+        },
+        {
+          "fr": "Ne prends pas ce vaccin sans avis.",
+          "en": "Don't take this vaccine without advice.",
+          "zh": "Don't take this vaccine without advice."
+        }
+      ]
+    },
+    {
+      "id": "ed-a2-06",
+      "book": "Édito A2",
+      "unit": 6,
+      "unitFr": "Côté cuisine",
+      "unitZh": "吃饭这件事",
+      "n": 6,
+      "title": "Côté cuisine",
+      "titleZh": "吃饭这件事",
+      "grammarTitle": "en 表数量，副词 -ment",
+      "grammar": [
+        "en 代替 de + 食物，表示一些、多少。",
+        "很多副词以 -ment 结尾。空白是食物新词。"
+      ],
+      "examples": [
+        {
+          "fr": "Du gaspillage, il y en a trop.",
+          "en": "There is too much waste.",
+          "zh": "There is too much waste."
+        },
+        {
+          "fr": "Le cuisinier explique clairement la recette.",
+          "en": "The cook explains the recipe clearly.",
+          "zh": "The cook explains the recipe clearly."
+        }
+      ]
+    },
+    {
+      "id": "ed-a2-07",
+      "book": "Édito A2",
+      "unit": 7,
+      "unitFr": "Qui se ressemble s'assemble",
+      "unitZh": "物以类聚",
+      "n": 7,
+      "title": "Qui se ressemble s'assemble",
+      "titleZh": "物以类聚",
+      "grammarTitle": "性格和情感",
+      "grammar": [
+        "表达情感可以用 être、avoir l'air，或虚拟式/不定式：je suis content que... 这课先用不定式和形容词。",
+        "lequel 用来问“哪一个性格”。空白是性格新词。"
+      ],
+      "examples": [
+        {
+          "fr": "Lequel de ces défauts te gêne ?",
+          "en": "Which of these flaws bothers you?",
+          "zh": "Which of these flaws bothers you?"
+        },
+        {
+          "fr": "Elle a l'air timide, mais elle est généreuse.",
+          "en": "She looks shy, but she is generous.",
+          "zh": "She looks shy, but she is generous."
+        }
+      ]
+    },
+    {
+      "id": "ed-a2-08",
+      "book": "Édito A2",
+      "unit": 8,
+      "unitFr": "L'actu en direct",
+      "unitZh": "新闻直播",
+      "n": 8,
+      "title": "L'actu en direct",
+      "titleZh": "新闻直播",
+      "grammarTitle": "原因、结果和命令式",
+      "grammar": [
+        "parce que 接句子，donc 引出结果。",
+        "命令式可以用来转述一条新闻任务。代词放在命令式后面。空白是媒体新词。"
+      ],
+      "examples": [
+        {
+          "fr": "La chronique explique la cause, donc l'audience comprend.",
+          "en": "The column explains the cause, so the audience understands.",
+          "zh": "The column explains the cause, so the audience understands."
+        },
+        {
+          "fr": "Écris cette rubrique, puis envoie-la.",
+          "en": "Write this section, then send it.",
+          "zh": "Write this section, then send it."
+        }
+      ]
+    },
+    {
+      "id": "ed-a2-09",
+      "book": "Édito A2",
+      "unit": 9,
+      "unitFr": "Consommer autrement",
+      "unitZh": "换种方式消费",
+      "n": 9,
+      "title": "Consommer autrement",
+      "titleZh": "换种方式消费",
+      "grammarTitle": "条件式和副动词",
+      "grammar": [
+        "条件式现在时表示委婉的愿望：je troquerais。",
+        "副动词 en + 现在分词，表示一边做。空白是消费新词。"
+      ],
+      "examples": [
+        {
+          "fr": "Je troquerais ce manteau contre un vélo.",
+          "en": "I would swap this coat for a bike.",
+          "zh": "I would swap this coat for a bike."
+        },
+        {
+          "fr": "En consommant moins, on gaspille moins.",
+          "en": "By consuming less, we waste less.",
+          "zh": "By consuming less, we waste less."
+        }
+      ]
+    },
+    {
+      "id": "ed-a2-10",
+      "book": "Édito A2",
+      "unit": 10,
+      "unitFr": "On part en voyage ?",
+      "unitZh": "出发旅行吗",
+      "n": 10,
+      "title": "On part en voyage ?",
+      "titleZh": "出发旅行吗",
+      "grammarTitle": "叙事里的两种过去",
+      "grammar": [
+        "未完成过去时是背景，复合过去时是打断背景的事件。",
+        "直接宾语代词如果在助动词前面，过去分词要配合。空白是旅行新词。"
+      ],
+      "examples": [
+        {
+          "fr": "Je lisais la brochure quand l'escale a changé.",
+          "en": "I was reading the brochure when the stopover changed.",
+          "zh": "I was reading the brochure when the stopover changed."
+        },
+        {
+          "fr": "L'hébergement, je l'ai réservé hier.",
+          "en": "The lodging — I booked it yesterday.",
+          "zh": "The lodging — I booked it yesterday."
+        }
+      ]
+    },
+    {
+      "id": "ed-a2-11",
+      "book": "Édito A2",
+      "unit": 11,
+      "unitFr": "On recrute",
+      "unitZh": "正在招聘",
+      "n": 11,
+      "title": "On recrute",
+      "titleZh": "正在招聘",
+      "grammarTitle": "转述和强调",
+      "grammar": [
+        "转述别人现在说的话：dire que + 直陈式。",
+        "c'est...qui / c'est...que 用来强调。空白是求职新词。"
+      ],
+      "examples": [
+        {
+          "fr": "Elle dit que sa candidature est partie.",
+          "en": "She says her application has been sent.",
+          "zh": "She says her application has been sent."
+        },
+        {
+          "fr": "C'est le stage qui lui plaît.",
+          "en": "It's the internship that appeals to her.",
+          "zh": "It's the internship that appeals to her."
+        }
+      ]
+    },
+    {
+      "id": "ed-a2-12",
+      "book": "Édito A2",
+      "unit": 12,
+      "unitFr": "L'appel de la nature",
+      "unitZh": "自然的召唤",
+      "n": 12,
+      "title": "L'appel de la nature",
+      "titleZh": "自然的召唤",
+      "grammarTitle": "被动和目的",
+      "grammar": [
+        "被动态：être + 过去分词，分词配合主语。",
+        "pour + 原形表示目的。空白是环境新词。"
+      ],
+      "examples": [
+        {
+          "fr": "Cette espèce est protégée pour éviter l'extinction.",
+          "en": "This species is protected to avoid extinction.",
+          "zh": "This species is protected to avoid extinction."
+        },
+        {
+          "fr": "Recycler, c'est réduire la pollution.",
+          "en": "Recycling means reducing pollution.",
+          "zh": "Recycling means reducing pollution."
+        }
+      ]
+    },
+    {
+      "id": "ed-b1-01",
+      "book": "Édito B1",
+      "unit": 1,
+      "unitFr": "Vivre ensemble",
+      "unitZh": "一起生活",
+      "n": 1,
+      "title": "Vivre ensemble",
+      "titleZh": "一起生活",
+      "grammarTitle": "虚拟式和否定前缀",
+      "grammar": [
+        "il faut que + 虚拟式，表示必须。conseiller de + 原形，比 il faut 软。",
+        "前缀 in-/im- 表示否定：impossible。空白是同居生活的新词。"
+      ],
+      "examples": [
+        {
+          "fr": "Il faut que le règlement soit clair.",
+          "en": "The rules need to be clear.",
+          "zh": "The rules need to be clear."
+        },
+        {
+          "fr": "Je te conseille de féliciter ta voisine.",
+          "en": "I advise you to congratulate your neighbour.",
+          "zh": "I advise you to congratulate your neighbour."
+        }
+      ]
+    },
+    {
+      "id": "ed-b1-02",
+      "book": "Édito B1",
+      "unit": 2,
+      "unitFr": "Le goût des nôtres",
+      "unitZh": "自己人的味道",
+      "n": 2,
+      "title": "Le goût des nôtres",
+      "titleZh": "自己人的味道",
+      "grammarTitle": "两种过去时讲家人",
+      "grammar": [
+        "未完成过去时讲小时候一直如此，复合过去时讲某一次。",
+        "代词动词的复合过去时用 être，过去分词配合。空白是家族新词。"
+      ],
+      "examples": [
+        {
+          "fr": "Mon ancêtre vivait à la campagne.",
+          "en": "My ancestor lived in the countryside.",
+          "zh": "My ancestor lived in the countryside."
+        },
+        {
+          "fr": "Cette anecdote, je me la suis rappelée.",
+          "en": "This anecdote — I remembered it.",
+          "zh": "This anecdote — I remembered it."
+        }
+      ]
+    },
+    {
+      "id": "ed-b1-03",
+      "book": "Édito B1",
+      "unit": 3,
+      "unitFr": "Travailler autrement",
+      "unitZh": "换种方式工作",
+      "n": 3,
+      "title": "Travailler autrement",
+      "titleZh": "换种方式工作",
+      "grammarTitle": "dont 和目的",
+      "grammar": [
+        "dont 代替 de + 名词：le travail dont je parle。",
+        "pour + 原形表示目的。空白是工作新词。"
+      ],
+      "examples": [
+        {
+          "fr": "Le télétravail dont elle parle fatigue.",
+          "en": "The remote work she talks about is tiring.",
+          "zh": "The remote work she talks about is tiring."
+        },
+        {
+          "fr": "Il démissionne pour éviter la surcharge.",
+          "en": "He is resigning to avoid overload.",
+          "zh": "He is resigning to avoid overload."
+        }
+      ]
+    },
+    {
+      "id": "ed-b1-04",
+      "book": "Édito B1",
+      "unit": 4,
+      "unitFr": "Date limite de consommation",
+      "unitZh": "保质期",
+      "n": 4,
+      "title": "Date limite de consommation",
+      "titleZh": "保质期",
+      "grammarTitle": "比较级和最高级",
+      "grammar": [
+        "plus / moins / aussi + 形容词 + que。最高级 le plus / le moins。",
+        "意见可以用 je trouve que + 直陈式，不必用虚拟式。空白是消费新词。"
+      ],
+      "examples": [
+        {
+          "fr": "Le vrac est moins cher que le paquet.",
+          "en": "Buying in bulk is cheaper than the packet.",
+          "zh": "Buying in bulk is cheaper than the packet."
+        },
+        {
+          "fr": "Je trouve que cet emballage est inutile.",
+          "en": "I find this packaging useless.",
+          "zh": "I find this packaging useless."
+        }
+      ]
+    },
+    {
+      "id": "ed-b1-05",
+      "book": "Édito B1",
+      "unit": 5,
+      "unitFr": "Le français dans le monde",
+      "unitZh": "世界上的法语",
+      "n": 5,
+      "title": "Le français dans le monde",
+      "titleZh": "世界上的法语",
+      "grammarTitle": "愈过去时和先后",
+      "grammar": [
+        "愈过去时 avoir/être 的未完成过去时 + 过去分词，表示在另一个过去之前。",
+        "双重复指：le français, je l'entends partout。空白是语言新词。"
+      ],
+      "examples": [
+        {
+          "fr": "L'expatrié avait déjà appris le créole.",
+          "en": "The expatriate had already learned Creole.",
+          "zh": "The expatriate had already learned Creole."
+        },
+        {
+          "fr": "Cette diversité, je l'avais sous-estimée.",
+          "en": "This diversity — I had underestimated it.",
+          "zh": "This diversity — I had underestimated it."
+        }
+      ]
+    },
+    {
+      "id": "ed-b1-06",
+      "book": "Édito B1",
+      "unit": 6,
+      "unitFr": "Médias en masse",
+      "unitZh": "大众媒体",
+      "n": 6,
+      "title": "Médias en masse",
+      "titleZh": "大众媒体",
+      "grammarTitle": "名词化",
+      "grammar": [
+        "把动词变成名词，句子更像新闻：vérifier → la vérification。",
+        "副词 -ment 说明媒体怎么做。空白是媒体新词。"
+      ],
+      "examples": [
+        {
+          "fr": "La vérification des faits prend du temps.",
+          "en": "Checking the facts takes time.",
+          "zh": "Checking the facts takes time."
+        },
+        {
+          "fr": "Ce canular a circulé rapidement.",
+          "en": "This hoax spread quickly.",
+          "zh": "This hoax spread quickly."
+        }
+      ]
+    },
+    {
+      "id": "ed-b1-07",
+      "book": "Édito B1",
+      "unit": 7,
+      "unitFr": "Et si on partait ?",
+      "unitZh": "要是出发呢",
+      "n": 7,
+      "title": "Et si on partait ?",
+      "titleZh": "要是出发呢",
+      "grammarTitle": "条件式过去",
+      "grammar": [
+        "对过去的假设：si + 愈过去时，主句用条件式过去（条件式 + 过去分词）。",
+        "这是已经发生过的遗憾，不是现在的礼貌条件式。空白是旅行新词。"
+      ],
+      "examples": [
+        {
+          "fr": "Si j'avais eu le budget, j'aurais pris un détour.",
+          "en": "If I had had the budget, I would have taken a detour.",
+          "zh": "If I had had the budget, I would have taken a detour."
+        },
+        {
+          "fr": "Nous aurions évité ce regret.",
+          "en": "We would have avoided this regret.",
+          "zh": "We would have avoided this regret."
+        }
+      ]
+    },
+    {
+      "id": "ed-b1-08",
+      "book": "Édito B1",
+      "unit": 8,
+      "unitFr": "La planète en héritage",
+      "unitZh": "继承这颗星球",
+      "n": 8,
+      "title": "La planète en héritage",
+      "titleZh": "继承这颗星球",
+      "grammarTitle": "介词和话语顺序",
+      "grammar": [
+        "有些动词固定接一个介词：contribuer à，lutter contre。",
+        "先说主题，再说评论，是更清楚的口语顺序。空白是气候新词。"
+      ],
+      "examples": [
+        {
+          "fr": "Cette empreinte, il faut la réduire.",
+          "en": "This footprint — we have to reduce it.",
+          "zh": "This footprint — we have to reduce it."
+        },
+        {
+          "fr": "Le tri contribue à moins de déchets.",
+          "en": "Sorting contributes to less waste.",
+          "zh": "Sorting contributes to less waste."
+        }
+      ]
+    },
+    {
+      "id": "ed-b1-09",
+      "book": "Édito B1",
+      "unit": 9,
+      "unitFr": "Un tour en ville",
+      "unitZh": "在城里走一圈",
+      "n": 9,
+      "title": "Un tour en ville",
+      "titleZh": "在城里走一圈",
+      "grammarTitle": "转述和数量",
+      "grammar": [
+        "转述现在或过去的话：dire que。问句转述用 si。",
+        "不定代词 quelques、plusieurs 表示不精确的数量。空白是城市新词。"
+      ],
+      "examples": [
+        {
+          "fr": "Elle dit que la circulation empire.",
+          "en": "She says the traffic is getting worse.",
+          "zh": "She says the traffic is getting worse."
+        },
+        {
+          "fr": "Quelques piétons ont signé la réclamation.",
+          "en": "A few pedestrians signed the complaint.",
+          "zh": "A few pedestrians signed the complaint."
+        }
+      ]
+    },
+    {
+      "id": "ed-b1-10",
+      "book": "Édito B1",
+      "unit": 10,
+      "unitFr": "Soif d'apprendre",
+      "unitZh": "求知",
+      "n": 10,
+      "title": "Soif d'apprendre",
+      "titleZh": "求知",
+      "grammarTitle": "原因和现在分词",
+      "grammar": [
+        "parce que 接句子，à cause de 接名词。",
+        "现在分词可以像形容词一样修饰名词。空白是学习新词。"
+      ],
+      "examples": [
+        {
+          "fr": "Il abandonne la philosophie parce que le cursus est long.",
+          "en": "He is dropping philosophy because the programme is long.",
+          "zh": "He is dropping philosophy because the programme is long."
+        },
+        {
+          "fr": "Les étudiants apprenant en ligne restent motivés.",
+          "en": "Students learning online stay motivated.",
+          "zh": "Students learning online stay motivated."
+        }
+      ]
+    },
+    {
+      "id": "ed-b1-11",
+      "book": "Édito B1",
+      "unit": 11,
+      "unitFr": "Il va y avoir du sport !",
+      "unitZh": "要运动了",
+      "n": 11,
+      "title": "Il va y avoir du sport !",
+      "titleZh": "要运动了",
+      "grammarTitle": "双代词顺序和先将来时",
+      "grammar": [
+        "两个代词：me/te/se/nous/vous 在 le/la/les 前面，lui/leur 在 en 前面。",
+        "先将来时：将来时的 avoir/être + 过去分词，表示到将来某时已经完成。空白是运动新词。"
+      ],
+      "examples": [
+        {
+          "fr": "Cet échauffement, je te le montre.",
+          "en": "This warm-up — I'll show it to you.",
+          "zh": "This warm-up — I'll show it to you."
+        },
+        {
+          "fr": "Quand tu auras fini la compétition, on parlera des bienfaits.",
+          "en": "When you have finished the competition, we'll talk about the benefits.",
+          "zh": "When you have finished the competition, we'll talk about the benefits."
+        }
+      ]
+    },
+    {
+      "id": "ed-b1-12",
+      "book": "Édito B1",
+      "unit": 12,
+      "unitFr": "Cultiver les talents",
+      "unitZh": "培养才能",
+      "n": 12,
+      "title": "Cultiver les talents",
+      "titleZh": "培养才能",
+      "grammarTitle": "让步和简单过去时",
+      "grammar": [
+        "bien que / quoique + 虚拟式，表示虽然。",
+        "简单过去时多出现在书面传记里：il publia。口语仍用复合过去时。空白是艺术新词。"
+      ],
+      "examples": [
+        {
+          "fr": "Bien que le roman soit dur, il plaît.",
+          "en": "Although the novel is harsh, people like it.",
+          "zh": "Although the novel is harsh, people like it."
+        },
+        {
+          "fr": "L'artiste publia cette toile en 1920.",
+          "en": "The artist published this canvas in 1920.",
+          "zh": "The artist published this canvas in 1920."
+        }
+      ]
+    },
+    {
+      "id": "ed-b2-01",
+      "book": "Édito B2",
+      "unit": 1,
+      "unitFr": "Se mettre au vert",
+      "unitZh": "走向绿色",
+      "n": 1,
+      "title": "Se mettre au vert",
+      "titleZh": "走向绿色",
+      "grammarTitle": "论证和生态词",
+      "grammar": [
+        "同意：je suis d'accord avec。不同意：je ne suis pas d'accord，或 en revanche。",
+        "论证时先给事实，再给判断。空白是生态新词。"
+      ],
+      "examples": [
+        {
+          "fr": "L'urgence climatique ne se discute plus.",
+          "en": "The climate emergency is no longer up for debate.",
+          "zh": "The climate emergency is no longer up for debate."
+        },
+        {
+          "fr": "Cette indignation vient des écogestes ignorés.",
+          "en": "This indignation comes from ignored eco-friendly habits.",
+          "zh": "This indignation comes from ignored eco-friendly habits."
+        }
+      ]
+    },
+    {
+      "id": "ed-b2-02",
+      "book": "Édito B2",
+      "unit": 2,
+      "unitFr": "Être ou avoir ?",
+      "unitZh": "存在还是拥有",
+      "n": 2,
+      "title": "Être ou avoir ?",
+      "titleZh": "存在还是拥有",
+      "grammarTitle": "虚拟式还是直陈式",
+      "grammar": [
+        "肯定的 penser que、croire que 用直陈式。douter que、il faut que 用虚拟式。",
+        "双代词：je te le montre。空白是消费新词。"
+      ],
+      "examples": [
+        {
+          "fr": "Je doute que cette monnaie locale dure.",
+          "en": "I doubt this local currency will last.",
+          "zh": "I doubt this local currency will last."
+        },
+        {
+          "fr": "Ce greenwashing, je te l'explique.",
+          "en": "This greenwashing — I'll explain it to you.",
+          "zh": "This greenwashing — I'll explain it to you."
+        }
+      ]
+    },
+    {
+      "id": "ed-b2-03",
+      "book": "Édito B2",
+      "unit": 3,
+      "unitFr": "Chercher sa voie",
+      "unitZh": "寻找自己的路",
+      "n": 3,
+      "title": "Chercher sa voie",
+      "titleZh": "寻找自己的路",
+      "grammarTitle": "假设",
+      "grammar": [
+        "si + 现在时，主句将来时，是还可能发生的假设。",
+        "si + 未完成过去时，主句条件式，是现在不太可能的假设。空白是教育新词。"
+      ],
+      "examples": [
+        {
+          "fr": "Si la mixité avance, l'école changera.",
+          "en": "If diversity of intake advances, school will change.",
+          "zh": "If diversity of intake advances, school will change."
+        },
+        {
+          "fr": "Si la gratuité existait, plus de gens étudieraient.",
+          "en": "If free tuition existed, more people would study.",
+          "zh": "If free tuition existed, more people would study."
+        }
+      ]
+    },
+    {
+      "id": "ed-b2-04",
+      "book": "Édito B2",
+      "unit": 4,
+      "unitFr": "Être connecté ou ne pas être",
+      "unitZh": "连接还是不连接",
+      "n": 4,
+      "title": "Être connecté ou ne pas être",
+      "titleZh": "连接还是不连接",
+      "grammarTitle": "数据和隐私",
+      "grammar": [
+        "否定可以叠加强度：ne...plus，ne...jamais。这里用新词把“不再”说具体。",
+        "关系从句可以把长定义收短。空白是数字生活新词。"
+      ],
+      "examples": [
+        {
+          "fr": "L'algorithme qui te connaît ne s'arrête plus.",
+          "en": "The algorithm that knows you no longer stops.",
+          "zh": "The algorithm that knows you no longer stops."
+        },
+        {
+          "fr": "La déconnexion devient un choix.",
+          "en": "Switching off is becoming a choice.",
+          "zh": "Switching off is becoming a choice."
+        }
+      ]
+    },
+    {
+      "id": "ed-b2-05",
+      "book": "Édito B2",
+      "unit": 5,
+      "unitFr": "Histoire au passé et au présent",
+      "unitZh": "过去和现在的历史",
+      "n": 5,
+      "title": "Histoire au passé et au présent",
+      "titleZh": "过去和现在的历史",
+      "grammarTitle": "过去的转述",
+      "grammar": [
+        "转述当时说的话，主句是过去时，从句往往改成未完成过去时或愈过去时。",
+        "空白是历史新词，不是 dire / être 这些旧词。"
+      ],
+      "examples": [
+        {
+          "fr": "Elle a dit que le patrimoine était menacé.",
+          "en": "She said the heritage was under threat.",
+          "zh": "She said the heritage was under threat."
+        },
+        {
+          "fr": "Les archives avaient déjà disparu quand il est arrivé.",
+          "en": "The archives had already disappeared when he arrived.",
+          "zh": "The archives had already disappeared when he arrived."
+        }
+      ]
+    },
+    {
+      "id": "ed-b2-06",
+      "book": "Édito B2",
+      "unit": 6,
+      "unitFr": "Lever l'ancre",
+      "unitZh": "起锚",
+      "n": 6,
+      "title": "Lever l'ancre",
+      "titleZh": "起锚",
+      "grammarTitle": "让步和比较的细微差别",
+      "grammar": [
+        "bien que + 虚拟式：虽然……还是……",
+        "比较不必只说 plus：plutôt、un peu plus 可以把差别说小。空白是航海新词。"
+      ],
+      "examples": [
+        {
+          "fr": "Bien que l'expédition soit risquée, l'équipage part.",
+          "en": "Although the expedition is risky, the crew leaves.",
+          "zh": "Although the expedition is risky, the crew leaves."
+        },
+        {
+          "fr": "La traversée est un peu plus longue que prévu.",
+          "en": "The crossing is a little longer than planned.",
+          "zh": "The crossing is a little longer than planned."
+        }
+      ]
+    },
+    {
+      "id": "ed-b2-07",
+      "book": "Édito B2",
+      "unit": 7,
+      "unitFr": "Le sens de l'actu",
+      "unitZh": "新闻的含义",
+      "n": 7,
+      "title": "Le sens de l'actu",
+      "titleZh": "新闻的含义",
+      "grammarTitle": "名词化和后果",
+      "grammar": [
+        "动词变成名词之后，句子可以当主语：la révélation de... a changé。",
+        "donc / par conséquent 引出后果。空白是新闻新词。"
+      ],
+      "examples": [
+        {
+          "fr": "La révélation de cette enquête a tout changé.",
+          "en": "The revelation of this investigation changed everything.",
+          "zh": "The revelation of this investigation changed everything."
+        },
+        {
+          "fr": "La désinformation a donc circulé plus vite.",
+          "en": "Disinformation therefore spread faster.",
+          "zh": "Disinformation therefore spread faster."
+        }
+      ]
+    },
+    {
+      "id": "ed-b2-08",
+      "book": "Édito B2",
+      "unit": 8,
+      "unitFr": "Prenez soin de vous !",
+      "unitZh": "照顾好自己",
+      "n": 8,
+      "title": "Prenez soin de vous !",
+      "titleZh": "照顾好自己",
+      "grammarTitle": "建议和身体",
+      "grammar": [
+        "条件式 il faudrait、tu devrais 是建议，不是 il faut 那种硬性义务。",
+        "空白是医疗新词。已经学过的 médecin、ordonnance 不再单独成卡。"
+      ],
+      "examples": [
+        {
+          "fr": "Il faudrait commencer ce traitement plus tôt.",
+          "en": "This treatment should have been started earlier. / One should start this treatment earlier.",
+          "zh": "This treatment should have been started earlier. / One should start this treatment earlier."
+        },
+        {
+          "fr": "La consultation dure vingt minutes.",
+          "en": "The appointment lasts twenty minutes.",
+          "zh": "The appointment lasts twenty minutes."
+        }
+      ]
+    },
+    {
+      "id": "ed-b2-09",
+      "book": "Édito B2",
+      "unit": 9,
+      "unitFr": "La richesse en partage",
+      "unitZh": "被分享的财富",
+      "n": 9,
+      "title": "La richesse en partage",
+      "titleZh": "被分享的财富",
+      "grammarTitle": "被动",
+      "grammar": [
+        "被动态：être + 过去分词。施动者用 par。",
+        "过去分词配合主语。空白是社会新词。"
+      ],
+      "examples": [
+        {
+          "fr": "Les inégalités sont creusées par le marché.",
+          "en": "Inequalities are widened by the market.",
+          "zh": "Inequalities are widened by the market."
+        },
+        {
+          "fr": "La précarité est sous-estimée.",
+          "en": "Precarity is underestimated.",
+          "zh": "Precarity is underestimated."
+        }
+      ]
+    },
+    {
+      "id": "ed-b2-10",
+      "book": "Édito B2",
+      "unit": 10,
+      "unitFr": "Parlez-vous français ?",
+      "unitZh": "你会说法语吗",
+      "n": 10,
+      "title": "Parlez-vous français ?",
+      "titleZh": "你会说法语吗",
+      "grammarTitle": "副动词和语体",
+      "grammar": [
+        "en + 现在分词，表示通过某种方式。",
+        "语体 registre 决定同一个意思用哪个词。空白是语言新词。"
+      ],
+      "examples": [
+        {
+          "fr": "En variant le registre, on change l'effet.",
+          "en": "By varying the register, you change the effect.",
+          "zh": "By varying the register, you change the effect."
+        },
+        {
+          "fr": "Cet emprunt à l'anglais s'est installé vite.",
+          "en": "This borrowing from English settled in quickly.",
+          "zh": "This borrowing from English settled in quickly."
+        }
+      ]
+    },
+    {
+      "id": "ed-b2-11",
+      "book": "Édito B2",
+      "unit": 11,
+      "unitFr": "Jusqu'où irons-nous ?",
+      "unitZh": "我们会走到哪里",
+      "n": 11,
+      "title": "Jusqu'où irons-nous ?",
+      "titleZh": "我们会走到哪里",
+      "grammarTitle": "限度和争议",
+      "grammar": [
+        "jusqu'où + 将来时，用来问边界。",
+        "虚拟式也可以接在 il est essentiel que 后面。空白是伦理新词。"
+      ],
+      "examples": [
+        {
+          "fr": "Jusqu'où cette intelligence ira-t-elle ?",
+          "en": "How far will this intelligence go?",
+          "zh": "How far will this intelligence go?"
+        },
+        {
+          "fr": "Il est essentiel que l'éthique reste visible.",
+          "en": "It is essential that ethics stay visible.",
+          "zh": "It is essential that ethics stay visible."
+        }
+      ]
+    },
+    {
+      "id": "ed-b2-12",
+      "book": "Édito B2",
+      "unit": 12,
+      "unitFr": "La force des arts",
+      "unitZh": "艺术的力量",
+      "n": 12,
+      "title": "La force des arts",
+      "titleZh": "艺术的力量",
+      "grammarTitle": "关系和艺术词",
+      "grammar": [
+        "关系代词 qui、que、dont、où 可以把艺术作品的定义嵌进句子。",
+        "空白是这课的新词，不用已经出现过的 œuvre、toile、roman。"
+      ],
+      "examples": [
+        {
+          "fr": "La galerie dont je te parle expose demain.",
+          "en": "The gallery I'm telling you about exhibits tomorrow.",
+          "zh": "The gallery I'm telling you about exhibits tomorrow."
+        },
+        {
+          "fr": "Le public qui reste comprend mieux.",
+          "en": "The audience that stays understands better.",
+          "zh": "The audience that stays understands better."
         }
       ]
     }
@@ -10589,6 +11561,2598 @@ window.DECK = {
       "tip": "ensemble 放在动词后面。",
       "glossEn": "together",
       "en": "We decide together."
+    },
+    {
+      "id": "ed-a2-01-01",
+      "lesson": "ed-a2-01",
+      "lemma": "chanteur",
+      "pos": "n.",
+      "gloss": "singer",
+      "glossEn": "singer",
+      "fr": "Le {chanteur} ne rate rien.",
+      "zh": "The singer doesn't miss a thing.",
+      "en": "The singer doesn't miss a thing.",
+      "tip": "ne...rien：什么也不。这里练的是新词 chanteur。"
+    },
+    {
+      "id": "ed-a2-01-02",
+      "lesson": "ed-a2-01",
+      "lemma": "origine",
+      "pos": "n.f.",
+      "gloss": "origin",
+      "glossEn": "origin",
+      "fr": "Elle parle de son {origine} sans gêne.",
+      "zh": "She talks about her origin without embarrassment.",
+      "en": "She talks about her origin without embarrassment.",
+      "tip": "origine 是阴性，讲自己从哪里来。"
+    },
+    {
+      "id": "ed-a2-01-03",
+      "lesson": "ed-a2-01",
+      "lemma": "loisir",
+      "pos": "n.m.",
+      "gloss": "leisure",
+      "glossEn": "leisure",
+      "fr": "Son {loisir} préféré, c'est la pétanque.",
+      "zh": "Her favourite leisure activity is pétanque.",
+      "en": "Her favourite leisure activity is pétanque.",
+      "tip": "loisir 常以复数 loisirs 出现，这里用单数也可以。"
+    },
+    {
+      "id": "ed-a2-01-04",
+      "lesson": "ed-a2-01",
+      "lemma": "pétanque",
+      "pos": "n.f.",
+      "gloss": "pétanque",
+      "glossEn": "pétanque",
+      "fr": "La {pétanque} se joue dans le Sud.",
+      "zh": "Pétanque is played in the South.",
+      "en": "Pétanque is played in the South.",
+      "tip": "pétanque 是阴性，法国南部的滚球。"
+    },
+    {
+      "id": "ed-a2-01-05",
+      "lesson": "ed-a2-01",
+      "lemma": "spectateur",
+      "pos": "n.",
+      "gloss": "spectator",
+      "glossEn": "spectator",
+      "fr": "Les {spectateurs} applaudissent fort.",
+      "zh": "The spectators applaud loudly.",
+      "en": "The spectators applaud loudly.",
+      "tip": "女性观众是 spectatrice。"
+    },
+    {
+      "id": "ed-a2-01-06",
+      "lesson": "ed-a2-01",
+      "lemma": "animateur",
+      "pos": "n.",
+      "gloss": "host",
+      "glossEn": "host",
+      "fr": "L'{animateur} propose une sortie.",
+      "zh": "The host suggests an outing.",
+      "en": "The host suggests an outing.",
+      "tip": "女主持人是 animatrice。元音前用 l'。"
+    },
+    {
+      "id": "ed-a2-02-01",
+      "lesson": "ed-a2-02",
+      "lemma": "paysage",
+      "pos": "n.m.",
+      "gloss": "landscape",
+      "glossEn": "landscape",
+      "fr": "Ce {paysage} me reste en mémoire.",
+      "zh": "This landscape stays in my memory.",
+      "en": "This landscape stays in my memory.",
+      "tip": "回忆里的景物用未完成过去时也可以：ce paysage était calme。"
+    },
+    {
+      "id": "ed-a2-02-02",
+      "lesson": "ed-a2-02",
+      "lemma": "orage",
+      "pos": "n.m.",
+      "gloss": "storm",
+      "glossEn": "storm",
+      "fr": "Un {orage} a coupé la promenade.",
+      "zh": "A storm cut the walk short.",
+      "en": "A storm cut the walk short.",
+      "tip": "突然发生的事用复合过去时。orage 是阳性。"
+    },
+    {
+      "id": "ed-a2-02-03",
+      "lesson": "ed-a2-02",
+      "lemma": "ciel",
+      "pos": "n.m.",
+      "gloss": "sky",
+      "glossEn": "sky",
+      "fr": "Le {ciel} était gris ce jour-là.",
+      "zh": "The sky was grey that day.",
+      "en": "The sky was grey that day.",
+      "tip": "天空当时的状态用未完成过去时 était。"
+    },
+    {
+      "id": "ed-a2-02-04",
+      "lesson": "ed-a2-02",
+      "lemma": "nostalgie",
+      "pos": "n.f.",
+      "gloss": "nostalgia",
+      "glossEn": "nostalgia",
+      "fr": "J'avais la {nostalgie} de cette colline.",
+      "zh": "I felt nostalgic for that hill.",
+      "en": "I felt nostalgic for that hill.",
+      "tip": "avoir la nostalgie de。"
+    },
+    {
+      "id": "ed-a2-02-05",
+      "lesson": "ed-a2-02",
+      "lemma": "témoignage",
+      "pos": "n.m.",
+      "gloss": "account",
+      "glossEn": "account",
+      "fr": "Son {témoignage} m'est resté.",
+      "zh": "Her account stayed with me.",
+      "en": "Her account stayed with me.",
+      "tip": "témoignage 是别人讲出来的一段经历。"
+    },
+    {
+      "id": "ed-a2-02-06",
+      "lesson": "ed-a2-02",
+      "lemma": "colline",
+      "pos": "n.f.",
+      "gloss": "hill",
+      "glossEn": "hill",
+      "fr": "La {colline} était verte en été.",
+      "zh": "The hill was green in summer.",
+      "en": "The hill was green in summer.",
+      "tip": "过去长期的样子用未完成过去时。"
+    },
+    {
+      "id": "ed-a2-03-01",
+      "lesson": "ed-a2-03",
+      "lemma": "caution",
+      "pos": "n.f.",
+      "gloss": "deposit",
+      "glossEn": "deposit",
+      "fr": "La {caution} est d'un mois de loyer.",
+      "zh": "The deposit is one month's rent.",
+      "en": "The deposit is one month's rent.",
+      "tip": "caution 在租房里是押金。"
+    },
+    {
+      "id": "ed-a2-03-02",
+      "lesson": "ed-a2-03",
+      "lemma": "ascenseur",
+      "pos": "n.m.",
+      "gloss": "lift",
+      "glossEn": "lift",
+      "fr": "L'{ascenseur} est en panne.",
+      "zh": "The lift is out of order.",
+      "en": "The lift is out of order.",
+      "tip": "ascenseur 是阳性。"
+    },
+    {
+      "id": "ed-a2-03-03",
+      "lesson": "ed-a2-03",
+      "lemma": "bail",
+      "pos": "n.m.",
+      "gloss": "lease",
+      "glossEn": "lease",
+      "fr": "Le {bail} dure un an.",
+      "zh": "The lease lasts one year.",
+      "en": "The lease lasts one year.",
+      "tip": "bail 是租约。"
+    },
+    {
+      "id": "ed-a2-03-04",
+      "lesson": "ed-a2-03",
+      "lemma": "colocataire",
+      "pos": "n.",
+      "gloss": "flatmate",
+      "glossEn": "flatmate",
+      "fr": "Le {colocataire} qui arrive est calme.",
+      "zh": "The flatmate who is arriving is quiet.",
+      "en": "The flatmate who is arriving is quiet.",
+      "tip": "qui 代替主语 colocataire。"
+    },
+    {
+      "id": "ed-a2-03-05",
+      "lesson": "ed-a2-03",
+      "lemma": "quittance",
+      "pos": "n.f.",
+      "gloss": "rent receipt",
+      "glossEn": "rent receipt",
+      "fr": "La {quittance} est dans ta boîte.",
+      "zh": "The rent receipt is in your mailbox.",
+      "en": "The rent receipt is in your mailbox.",
+      "tip": "quittance de loyer。"
+    },
+    {
+      "id": "ed-a2-03-06",
+      "lesson": "ed-a2-03",
+      "lemma": "voisinage",
+      "pos": "n.m.",
+      "gloss": "neighbourhood",
+      "glossEn": "neighbourhood",
+      "fr": "Le {voisinage} est plus calme que le centre.",
+      "zh": "The surrounding area is quieter than the centre.",
+      "en": "The surrounding area is quieter than the centre.",
+      "tip": "plus...que 比较两个地方。"
+    },
+    {
+      "id": "ed-a2-04-01",
+      "lesson": "ed-a2-04",
+      "lemma": "logiciel",
+      "pos": "n.m.",
+      "gloss": "software",
+      "glossEn": "software",
+      "fr": "Ce {logiciel} changera notre travail.",
+      "zh": "This software will change our work.",
+      "en": "This software will change our work.",
+      "tip": "changer 的将来时：changera。"
+    },
+    {
+      "id": "ed-a2-04-02",
+      "lesson": "ed-a2-04",
+      "lemma": "batterie",
+      "pos": "n.f.",
+      "gloss": "battery",
+      "glossEn": "battery",
+      "fr": "Si la {batterie} tombe, tout s'arrête.",
+      "zh": "If the battery dies, everything stops.",
+      "en": "If the battery dies, everything stops.",
+      "tip": "si 后面用现在时 tombe，不用将来时。"
+    },
+    {
+      "id": "ed-a2-04-03",
+      "lesson": "ed-a2-04",
+      "lemma": "robot",
+      "pos": "n.m.",
+      "gloss": "robot",
+      "glossEn": "robot",
+      "fr": "Ce {robot} parlera plusieurs langues.",
+      "zh": "This robot will speak several languages.",
+      "en": "This robot will speak several languages.",
+      "tip": "parler 的将来时：parlera。"
+    },
+    {
+      "id": "ed-a2-04-04",
+      "lesson": "ed-a2-04",
+      "lemma": "inventeur",
+      "pos": "n.",
+      "gloss": "inventor",
+      "glossEn": "inventor",
+      "fr": "L'{inventeur} présentera son idée demain.",
+      "zh": "The inventor will present his idea tomorrow.",
+      "en": "The inventor will present his idea tomorrow.",
+      "tip": "女发明家是 inventrice。"
+    },
+    {
+      "id": "ed-a2-04-05",
+      "lesson": "ed-a2-04",
+      "lemma": "innovation",
+      "pos": "n.f.",
+      "gloss": "innovation",
+      "glossEn": "innovation",
+      "fr": "Cette {innovation} sera utile à l'école.",
+      "zh": "This innovation will be useful at school.",
+      "en": "This innovation will be useful at school.",
+      "tip": "être 的将来时：sera。"
+    },
+    {
+      "id": "ed-a2-04-06",
+      "lesson": "ed-a2-04",
+      "lemma": "numérique",
+      "pos": "adj.",
+      "gloss": "digital",
+      "glossEn": "digital",
+      "fr": "Le monde {numérique} ira plus vite.",
+      "zh": "The digital world will move faster.",
+      "en": "The digital world will move faster.",
+      "tip": "aller 的将来时：ira。numérique 阴阳同形。"
+    },
+    {
+      "id": "ed-a2-05-01",
+      "lesson": "ed-a2-05",
+      "lemma": "pharmacie",
+      "pos": "n.f.",
+      "gloss": "pharmacy",
+      "glossEn": "pharmacy",
+      "fr": "La {pharmacie} de garde est ouverte.",
+      "zh": "The duty pharmacy is open.",
+      "en": "The duty pharmacy is open.",
+      "tip": "值夜的药店说 pharmacie de garde。"
+    },
+    {
+      "id": "ed-a2-05-02",
+      "lesson": "ed-a2-05",
+      "lemma": "allergie",
+      "pos": "n.f.",
+      "gloss": "allergy",
+      "glossEn": "allergy",
+      "fr": "Il faut que cette {allergie} soit suivie.",
+      "zh": "This allergy needs to be monitored.",
+      "en": "This allergy needs to be monitored.",
+      "tip": "il faut que + 虚拟式 soit。"
+    },
+    {
+      "id": "ed-a2-05-03",
+      "lesson": "ed-a2-05",
+      "lemma": "fièvre",
+      "pos": "n.f.",
+      "gloss": "fever",
+      "glossEn": "fever",
+      "fr": "Il a de la {fièvre} depuis hier.",
+      "zh": "He has had a fever since yesterday.",
+      "en": "He has had a fever since yesterday.",
+      "tip": "avoir de la fièvre。"
+    },
+    {
+      "id": "ed-a2-05-04",
+      "lesson": "ed-a2-05",
+      "lemma": "toux",
+      "pos": "n.f.",
+      "gloss": "cough",
+      "glossEn": "cough",
+      "fr": "Cette {toux} l'empêche de dormir.",
+      "zh": "This cough keeps him from sleeping.",
+      "en": "This cough keeps him from sleeping.",
+      "tip": "toux 结尾的 x 不发音，阴性。"
+    },
+    {
+      "id": "ed-a2-05-05",
+      "lesson": "ed-a2-05",
+      "lemma": "symptôme",
+      "pos": "n.m.",
+      "gloss": "symptom",
+      "glossEn": "symptom",
+      "fr": "Le {symptôme} le plus clair, c'est la toux.",
+      "zh": "The clearest symptom is the cough.",
+      "en": "The clearest symptom is the cough.",
+      "tip": "symptôme 是阳性。"
+    },
+    {
+      "id": "ed-a2-05-06",
+      "lesson": "ed-a2-05",
+      "lemma": "vaccin",
+      "pos": "n.m.",
+      "gloss": "vaccine",
+      "glossEn": "vaccine",
+      "fr": "Ce {vaccin} est nécessaire en hiver.",
+      "zh": "This vaccine is necessary in winter.",
+      "en": "This vaccine is necessary in winter.",
+      "tip": "nécessaire 后面如果接 que，才用虚拟式。"
+    },
+    {
+      "id": "ed-a2-06-01",
+      "lesson": "ed-a2-06",
+      "lemma": "gaspillage",
+      "pos": "n.m.",
+      "gloss": "waste",
+      "glossEn": "waste",
+      "fr": "Du {gaspillage}, il y en a trop.",
+      "zh": "There is too much of this waste.",
+      "en": "There is too much of this waste.",
+      "tip": "en 代替 du gaspillage：il y en a trop。"
+    },
+    {
+      "id": "ed-a2-06-02",
+      "lesson": "ed-a2-06",
+      "lemma": "menu",
+      "pos": "n.m.",
+      "gloss": "menu",
+      "glossEn": "menu",
+      "fr": "Le {menu} change chaque midi.",
+      "zh": "The menu changes every noon.",
+      "en": "The menu changes every noon.",
+      "tip": "menu 是阳性。"
+    },
+    {
+      "id": "ed-a2-06-03",
+      "lesson": "ed-a2-06",
+      "lemma": "entrée",
+      "pos": "n.f.",
+      "gloss": "starter",
+      "glossEn": "starter",
+      "fr": "L'{entrée} est une soupe.",
+      "zh": "The starter is a soup.",
+      "en": "The starter is a soup.",
+      "tip": "法国菜单里 entrée 是头盘，不是入口。"
+    },
+    {
+      "id": "ed-a2-06-04",
+      "lesson": "ed-a2-06",
+      "lemma": "dessert",
+      "pos": "n.m.",
+      "gloss": "dessert",
+      "glossEn": "dessert",
+      "fr": "Le {dessert} arrive après le fromage.",
+      "zh": "Dessert comes after the cheese.",
+      "en": "Dessert comes after the cheese.",
+      "tip": "dessert 是阳性。"
+    },
+    {
+      "id": "ed-a2-06-05",
+      "lesson": "ed-a2-06",
+      "lemma": "recette",
+      "pos": "n.f.",
+      "gloss": "recipe",
+      "glossEn": "recipe",
+      "fr": "Cette {recette} est vraiment simple.",
+      "zh": "This recipe is really simple.",
+      "en": "This recipe is really simple.",
+      "tip": "vraiment 是已经学过的副词，这里空白是 recette。"
+    },
+    {
+      "id": "ed-a2-06-06",
+      "lesson": "ed-a2-06",
+      "lemma": "ingrédient",
+      "pos": "n.m.",
+      "gloss": "ingredient",
+      "glossEn": "ingredient",
+      "fr": "Il manque un {ingrédient}.",
+      "zh": "One ingredient is missing.",
+      "en": "One ingredient is missing.",
+      "tip": "ingrédient 是阳性。"
+    },
+    {
+      "id": "ed-a2-07-01",
+      "lesson": "ed-a2-07",
+      "lemma": "défaut",
+      "pos": "n.m.",
+      "gloss": "flaw",
+      "glossEn": "flaw",
+      "fr": "Lequel de ces {défauts} te gêne ?",
+      "zh": "Which of these flaws bothers you?",
+      "en": "Which of these flaws bothers you?",
+      "tip": "lequel 问哪一个。défaut 的复数 défauts。"
+    },
+    {
+      "id": "ed-a2-07-02",
+      "lesson": "ed-a2-07",
+      "lemma": "timide",
+      "pos": "adj.",
+      "gloss": "shy",
+      "glossEn": "shy",
+      "fr": "Elle a l'air {timide}.",
+      "zh": "She looks shy.",
+      "en": "She looks shy.",
+      "tip": "timide 阴阳同形。avoir l'air + 形容词。"
+    },
+    {
+      "id": "ed-a2-07-03",
+      "lesson": "ed-a2-07",
+      "lemma": "généreux",
+      "pos": "adj.",
+      "gloss": "generous",
+      "glossEn": "generous",
+      "fr": "Il est {généreux} avec ses amis.",
+      "zh": "He is generous with his friends.",
+      "en": "He is generous with his friends.",
+      "tip": "女性是 généreuse。"
+    },
+    {
+      "id": "ed-a2-07-04",
+      "lesson": "ed-a2-07",
+      "lemma": "émotion",
+      "pos": "n.f.",
+      "gloss": "emotion",
+      "glossEn": "emotion",
+      "fr": "Cette {émotion} se lit sur son visage.",
+      "zh": "This emotion shows on his face.",
+      "en": "This emotion shows on his face.",
+      "tip": "émotion 是阴性。"
+    },
+    {
+      "id": "ed-a2-07-05",
+      "lesson": "ed-a2-07",
+      "lemma": "personnalité",
+      "pos": "n.f.",
+      "gloss": "personality",
+      "glossEn": "personality",
+      "fr": "Sa {personnalité} plaît à tout le monde.",
+      "zh": "Her personality appeals to everyone.",
+      "en": "Her personality appeals to everyone.",
+      "tip": "personnalité 是阴性。"
+    },
+    {
+      "id": "ed-a2-07-06",
+      "lesson": "ed-a2-07",
+      "lemma": "jaloux",
+      "pos": "adj.",
+      "gloss": "jealous",
+      "glossEn": "jealous",
+      "fr": "Il est {jaloux} sans raison.",
+      "zh": "He is jealous for no reason.",
+      "en": "He is jealous for no reason.",
+      "tip": "女性是 jalouse。"
+    },
+    {
+      "id": "ed-a2-08-01",
+      "lesson": "ed-a2-08",
+      "lemma": "chronique",
+      "pos": "n.f.",
+      "gloss": "column",
+      "glossEn": "column",
+      "fr": "Cette {chronique} explique la cause.",
+      "zh": "This column explains the cause.",
+      "en": "This column explains the cause.",
+      "tip": "chronique 是专栏，阴性。"
+    },
+    {
+      "id": "ed-a2-08-02",
+      "lesson": "ed-a2-08",
+      "lemma": "audience",
+      "pos": "n.f.",
+      "gloss": "audience",
+      "glossEn": "audience",
+      "fr": "L'{audience} comprend donc le sujet.",
+      "zh": "The audience therefore understands the topic.",
+      "en": "The audience therefore understands the topic.",
+      "tip": "donc 放在结果前面。"
+    },
+    {
+      "id": "ed-a2-08-03",
+      "lesson": "ed-a2-08",
+      "lemma": "rédaction",
+      "pos": "n.f.",
+      "gloss": "newsroom",
+      "glossEn": "newsroom",
+      "fr": "La {rédaction} boucle le journal.",
+      "zh": "The newsroom closes the edition.",
+      "en": "The newsroom closes the edition.",
+      "tip": "rédaction 也表示写作。"
+    },
+    {
+      "id": "ed-a2-08-04",
+      "lesson": "ed-a2-08",
+      "lemma": "témoin",
+      "pos": "n.",
+      "gloss": "witness",
+      "glossEn": "witness",
+      "fr": "Un {témoin} raconte les faits.",
+      "zh": "A witness tells what happened.",
+      "en": "A witness tells what happened.",
+      "tip": "témoin 阴阳同形。"
+    },
+    {
+      "id": "ed-a2-08-05",
+      "lesson": "ed-a2-08",
+      "lemma": "rubrique",
+      "pos": "n.f.",
+      "gloss": "section",
+      "glossEn": "section",
+      "fr": "Écris cette {rubrique} avant midi.",
+      "zh": "Write this section before noon.",
+      "en": "Write this section before noon.",
+      "tip": "命令式 tu：écris，没有词尾 s 的问题，écrire 的命令式是 écris。"
+    },
+    {
+      "id": "ed-a2-08-06",
+      "lesson": "ed-a2-08",
+      "lemma": "éditorial",
+      "pos": "n.m.",
+      "gloss": "editorial",
+      "glossEn": "editorial",
+      "fr": "L'{éditorial} donne le ton.",
+      "zh": "The editorial sets the tone.",
+      "en": "The editorial sets the tone.",
+      "tip": "éditorial 是阳性。"
+    },
+    {
+      "id": "ed-a2-09-01",
+      "lesson": "ed-a2-09",
+      "lemma": "troc",
+      "pos": "n.m.",
+      "gloss": "swap",
+      "glossEn": "swap",
+      "fr": "Un {troc} aurait lieu samedi.",
+      "zh": "A swap would take place on Saturday.",
+      "en": "A swap would take place on Saturday.",
+      "tip": "条件式 aurait：这只是一个设想。"
+    },
+    {
+      "id": "ed-a2-09-02",
+      "lesson": "ed-a2-09",
+      "lemma": "occasion",
+      "pos": "n.f.",
+      "gloss": "second-hand",
+      "glossEn": "second-hand",
+      "fr": "J'achèterais cette veste d'{occasion}.",
+      "zh": "I would buy this jacket second-hand.",
+      "en": "I would buy this jacket second-hand.",
+      "tip": "d'occasion 是二手。条件式 achèterais。"
+    },
+    {
+      "id": "ed-a2-09-03",
+      "lesson": "ed-a2-09",
+      "lemma": "consommer",
+      "pos": "v.",
+      "gloss": "to consume",
+      "glossEn": "to consume",
+      "fr": "En {consommant} moins, on jette moins.",
+      "zh": "By consuming less, we throw less away.",
+      "en": "By consuming less, we throw less away.",
+      "tip": "en + 现在分词 consommant。"
+    },
+    {
+      "id": "ed-a2-09-04",
+      "lesson": "ed-a2-09",
+      "lemma": "emprunter",
+      "pos": "v.",
+      "gloss": "to borrow",
+      "glossEn": "to borrow",
+      "fr": "J'{emprunterais} l'outil plutôt que de l'acheter.",
+      "zh": "I would borrow the tool rather than buy it.",
+      "en": "I would borrow the tool rather than buy it.",
+      "tip": "条件式 emprunterais，比 je vais acheter 更委婉。"
+    },
+    {
+      "id": "ed-a2-09-05",
+      "lesson": "ed-a2-09",
+      "lemma": "don",
+      "pos": "n.m.",
+      "gloss": "donation",
+      "glossEn": "donation",
+      "fr": "Ce {don} aiderait trois familles.",
+      "zh": "This donation would help three families.",
+      "en": "This donation would help three families.",
+      "tip": "条件式 aiderait。don 是阳性。"
+    },
+    {
+      "id": "ed-a2-09-06",
+      "lesson": "ed-a2-09",
+      "lemma": "brocante",
+      "pos": "n.f.",
+      "gloss": "flea market",
+      "glossEn": "flea market",
+      "fr": "La {brocante} ouvrirait à dix heures.",
+      "zh": "The flea market would open at ten.",
+      "en": "The flea market would open at ten.",
+      "tip": "条件式 ouvrirait。"
+    },
+    {
+      "id": "ed-a2-10-01",
+      "lesson": "ed-a2-10",
+      "lemma": "réservation",
+      "pos": "n.f.",
+      "gloss": "booking",
+      "glossEn": "booking",
+      "fr": "La {réservation} est confirmée.",
+      "zh": "The booking is confirmed.",
+      "en": "The booking is confirmed.",
+      "tip": "réservation 是阴性。"
+    },
+    {
+      "id": "ed-a2-10-02",
+      "lesson": "ed-a2-10",
+      "lemma": "auberge",
+      "pos": "n.f.",
+      "gloss": "inn",
+      "glossEn": "inn",
+      "fr": "L'{auberge} était complète.",
+      "zh": "The inn was full.",
+      "en": "The inn was full.",
+      "tip": "当时的状态用未完成过去时。"
+    },
+    {
+      "id": "ed-a2-10-03",
+      "lesson": "ed-a2-10",
+      "lemma": "itinéraire",
+      "pos": "n.m.",
+      "gloss": "itinerary",
+      "glossEn": "itinerary",
+      "fr": "L'{itinéraire} a changé ce matin.",
+      "zh": "The itinerary changed this morning.",
+      "en": "The itinerary changed this morning.",
+      "tip": "改变发生在一个时间点，用复合过去时。"
+    },
+    {
+      "id": "ed-a2-10-04",
+      "lesson": "ed-a2-10",
+      "lemma": "hébergement",
+      "pos": "n.m.",
+      "gloss": "lodging",
+      "glossEn": "lodging",
+      "fr": "L'{hébergement}, je l'ai réservé.",
+      "zh": "The lodging — I booked it.",
+      "en": "The lodging — I booked it.",
+      "tip": "l' 在助动词前。hébergement 阳性，所以 réservé 不加 e。"
+    },
+    {
+      "id": "ed-a2-10-05",
+      "lesson": "ed-a2-10",
+      "lemma": "escale",
+      "pos": "n.f.",
+      "gloss": "stopover",
+      "glossEn": "stopover",
+      "fr": "L'{escale} dure deux heures.",
+      "zh": "The stopover lasts two hours.",
+      "en": "The stopover lasts two hours.",
+      "tip": "escale 是阴性。"
+    },
+    {
+      "id": "ed-a2-10-06",
+      "lesson": "ed-a2-10",
+      "lemma": "brochure",
+      "pos": "n.f.",
+      "gloss": "brochure",
+      "glossEn": "brochure",
+      "fr": "Je lisais la {brochure} quand le train est parti.",
+      "zh": "I was reading the brochure when the train left.",
+      "en": "I was reading the brochure when the train left.",
+      "tip": "lisais 是背景，est parti 是突发事件。"
+    },
+    {
+      "id": "ed-a2-11-01",
+      "lesson": "ed-a2-11",
+      "lemma": "candidature",
+      "pos": "n.f.",
+      "gloss": "application",
+      "glossEn": "application",
+      "fr": "Elle dit que sa {candidature} est partie.",
+      "zh": "She says her application has gone out.",
+      "en": "She says her application has gone out.",
+      "tip": "dire que 后面用直陈式 est。"
+    },
+    {
+      "id": "ed-a2-11-02",
+      "lesson": "ed-a2-11",
+      "lemma": "stage",
+      "pos": "n.m.",
+      "gloss": "internship",
+      "glossEn": "internship",
+      "fr": "C'est le {stage} qui lui plaît.",
+      "zh": "It's the internship that appeals to her.",
+      "en": "It's the internship that appeals to her.",
+      "tip": "c'est...qui 强调主语。"
+    },
+    {
+      "id": "ed-a2-11-03",
+      "lesson": "ed-a2-11",
+      "lemma": "formation",
+      "pos": "n.f.",
+      "gloss": "training",
+      "glossEn": "training",
+      "fr": "Cette {formation} dure six mois.",
+      "zh": "This training lasts six months.",
+      "en": "This training lasts six months.",
+      "tip": "formation 是阴性。"
+    },
+    {
+      "id": "ed-a2-11-04",
+      "lesson": "ed-a2-11",
+      "lemma": "motivation",
+      "pos": "n.f.",
+      "gloss": "motivation",
+      "glossEn": "motivation",
+      "fr": "Sa {motivation} se voit dans la lettre.",
+      "zh": "Her motivation shows in the letter.",
+      "en": "Her motivation shows in the letter.",
+      "tip": "motivation 是阴性。"
+    },
+    {
+      "id": "ed-a2-11-05",
+      "lesson": "ed-a2-11",
+      "lemma": "lettre",
+      "pos": "n.f.",
+      "gloss": "letter",
+      "glossEn": "letter",
+      "fr": "La {lettre} de motivation est courte.",
+      "zh": "The cover letter is short.",
+      "en": "The cover letter is short.",
+      "tip": "lettre de motivation。"
+    },
+    {
+      "id": "ed-a2-11-06",
+      "lesson": "ed-a2-11",
+      "lemma": "alternance",
+      "pos": "n.f.",
+      "gloss": "work-study",
+      "glossEn": "work-study",
+      "fr": "L'{alternance} mélange cours et entreprise.",
+      "zh": "Work-study mixes classes and the company.",
+      "en": "Work-study mixes classes and the company.",
+      "tip": "alternance 是学习和上班交替。"
+    },
+    {
+      "id": "ed-a2-12-01",
+      "lesson": "ed-a2-12",
+      "lemma": "pollution",
+      "pos": "n.f.",
+      "gloss": "pollution",
+      "glossEn": "pollution",
+      "fr": "La {pollution} baisse près de la rivière.",
+      "zh": "Pollution is dropping near the river.",
+      "en": "Pollution is dropping near the river.",
+      "tip": "pollution 是阴性。"
+    },
+    {
+      "id": "ed-a2-12-02",
+      "lesson": "ed-a2-12",
+      "lemma": "espèce",
+      "pos": "n.f.",
+      "gloss": "species",
+      "glossEn": "species",
+      "fr": "Cette {espèce} est protégée.",
+      "zh": "This species is protected.",
+      "en": "This species is protected.",
+      "tip": "被动态。espèce 阴性，protégée 加 e。"
+    },
+    {
+      "id": "ed-a2-12-03",
+      "lesson": "ed-a2-12",
+      "lemma": "extinction",
+      "pos": "n.f.",
+      "gloss": "extinction",
+      "glossEn": "extinction",
+      "fr": "L'{extinction} de cette espèce inquiète.",
+      "zh": "The extinction of this species is worrying.",
+      "en": "The extinction of this species is worrying.",
+      "tip": "extinction 是阴性。"
+    },
+    {
+      "id": "ed-a2-12-04",
+      "lesson": "ed-a2-12",
+      "lemma": "recycler",
+      "pos": "v.",
+      "gloss": "to recycle",
+      "glossEn": "to recycle",
+      "fr": "{Recycler}, c'est agir pour la nature.",
+      "zh": "Recycling means acting for nature.",
+      "en": "Recycling means acting for nature.",
+      "tip": "原形放在句首，当作一件事。"
+    },
+    {
+      "id": "ed-a2-12-05",
+      "lesson": "ed-a2-12",
+      "lemma": "déchet",
+      "pos": "n.m.",
+      "gloss": "waste",
+      "glossEn": "waste",
+      "fr": "Les {déchets} sont triés ici.",
+      "zh": "Waste is sorted here.",
+      "en": "Waste is sorted here.",
+      "tip": "被动态，主语复数，triés。"
+    },
+    {
+      "id": "ed-a2-12-06",
+      "lesson": "ed-a2-12",
+      "lemma": "biodiversité",
+      "pos": "n.f.",
+      "gloss": "biodiversity",
+      "glossEn": "biodiversity",
+      "fr": "La {biodiversité} diminue trop vite.",
+      "zh": "Biodiversity is shrinking too fast.",
+      "en": "Biodiversity is shrinking too fast.",
+      "tip": "biodiversité 是阴性。"
+    },
+    {
+      "id": "ed-b1-01-01",
+      "lesson": "ed-b1-01",
+      "lemma": "convivialité",
+      "pos": "n.f.",
+      "gloss": "conviviality",
+      "glossEn": "conviviality",
+      "fr": "La {convivialité} rend l'immeuble vivant.",
+      "zh": "Conviviality makes the building feel alive.",
+      "en": "Conviviality makes the building feel alive.",
+      "tip": "convivialité 是阴性。"
+    },
+    {
+      "id": "ed-b1-01-02",
+      "lesson": "ed-b1-01",
+      "lemma": "règlement",
+      "pos": "n.m.",
+      "gloss": "rules",
+      "glossEn": "rules",
+      "fr": "Il faut que le {règlement} soit clair.",
+      "zh": "The house rules need to be clear.",
+      "en": "The house rules need to be clear.",
+      "tip": "il faut que + 虚拟式 soit。"
+    },
+    {
+      "id": "ed-b1-01-03",
+      "lesson": "ed-b1-01",
+      "lemma": "féliciter",
+      "pos": "v.",
+      "gloss": "to congratulate",
+      "glossEn": "to congratulate",
+      "fr": "Je te conseille de la {féliciter}.",
+      "zh": "I advise you to congratulate her.",
+      "en": "I advise you to congratulate her.",
+      "tip": "conseiller de + 原形，比命令软。"
+    },
+    {
+      "id": "ed-b1-01-04",
+      "lesson": "ed-b1-01",
+      "lemma": "indifférence",
+      "pos": "n.f.",
+      "gloss": "indifference",
+      "glossEn": "indifference",
+      "fr": "Son {indifférence} gêne les voisins.",
+      "zh": "His indifference bothers the neighbours.",
+      "en": "His indifference bothers the neighbours.",
+      "tip": "indifférence 是 in- 加上 différence 的否定意味。"
+    },
+    {
+      "id": "ed-b1-01-05",
+      "lesson": "ed-b1-01",
+      "lemma": "participation",
+      "pos": "n.f.",
+      "gloss": "participation",
+      "glossEn": "participation",
+      "fr": "Ta {participation} compte pour le projet.",
+      "zh": "Your participation matters for the project.",
+      "en": "Your participation matters for the project.",
+      "tip": "participation 是阴性。"
+    },
+    {
+      "id": "ed-b1-01-06",
+      "lesson": "ed-b1-01",
+      "lemma": "courtoisie",
+      "pos": "n.f.",
+      "gloss": "courtesy",
+      "glossEn": "courtesy",
+      "fr": "La {courtoisie} évite beaucoup de conflits.",
+      "zh": "Courtesy avoids a lot of conflict.",
+      "en": "Courtesy avoids a lot of conflict.",
+      "tip": "courtoisie 是阴性。"
+    },
+    {
+      "id": "ed-b1-02-01",
+      "lesson": "ed-b1-02",
+      "lemma": "généalogie",
+      "pos": "n.f.",
+      "gloss": "genealogy",
+      "glossEn": "genealogy",
+      "fr": "La {généalogie} de sa famille tient sur un cahier.",
+      "zh": "Her family's genealogy fits in a notebook.",
+      "en": "Her family's genealogy fits in a notebook.",
+      "tip": "généalogie 是阴性。"
+    },
+    {
+      "id": "ed-b1-02-02",
+      "lesson": "ed-b1-02",
+      "lemma": "ancêtre",
+      "pos": "n.",
+      "gloss": "ancestor",
+      "glossEn": "ancestor",
+      "fr": "Mon {ancêtre} vivait près de Lyon.",
+      "zh": "My ancestor lived near Lyon.",
+      "en": "My ancestor lived near Lyon.",
+      "tip": "长期居住用未完成过去时 vivait。"
+    },
+    {
+      "id": "ed-b1-02-03",
+      "lesson": "ed-b1-02",
+      "lemma": "cousin",
+      "pos": "n.",
+      "gloss": "cousin",
+      "glossEn": "cousin",
+      "fr": "Mon {cousin} est arrivé sans prévenir.",
+      "zh": "My cousin arrived without warning.",
+      "en": "My cousin arrived without warning.",
+      "tip": "到达是一个点，用复合过去时。堂姐是 cousine。"
+    },
+    {
+      "id": "ed-b1-02-04",
+      "lesson": "ed-b1-02",
+      "lemma": "anecdote",
+      "pos": "n.f.",
+      "gloss": "anecdote",
+      "glossEn": "anecdote",
+      "fr": "Cette {anecdote}, il la raconte encore.",
+      "zh": "He still tells this anecdote.",
+      "en": "He still tells this anecdote.",
+      "tip": "anecdote 是阴性。"
+    },
+    {
+      "id": "ed-b1-02-05",
+      "lesson": "ed-b1-02",
+      "lemma": "lien",
+      "pos": "n.m.",
+      "gloss": "bond",
+      "glossEn": "bond",
+      "fr": "Le {lien} avec sa sœur est resté fort.",
+      "zh": "The bond with his sister stayed strong.",
+      "en": "The bond with his sister stayed strong.",
+      "tip": "lien 是阳性。"
+    },
+    {
+      "id": "ed-b1-02-06",
+      "lesson": "ed-b1-02",
+      "lemma": "racine",
+      "pos": "n.f.",
+      "gloss": "root",
+      "glossEn": "root",
+      "fr": "Elle cherche ses {racines} au Cameroun.",
+      "zh": "She is looking for her roots in Cameroon.",
+      "en": "She is looking for her roots in Cameroon.",
+      "tip": "racine 常用复数 racines。"
+    },
+    {
+      "id": "ed-b1-03-01",
+      "lesson": "ed-b1-03",
+      "lemma": "télétravail",
+      "pos": "n.m.",
+      "gloss": "remote work",
+      "glossEn": "remote work",
+      "fr": "Le {télétravail} dont elle parle la fatigue.",
+      "zh": "The remote work she mentions tires her.",
+      "en": "The remote work she mentions tires her.",
+      "tip": "parler de → dont。"
+    },
+    {
+      "id": "ed-b1-03-02",
+      "lesson": "ed-b1-03",
+      "lemma": "responsabilité",
+      "pos": "n.f.",
+      "gloss": "responsibility",
+      "glossEn": "responsibility",
+      "fr": "Cette {responsabilité} est trop lourde.",
+      "zh": "This responsibility is too heavy.",
+      "en": "This responsibility is too heavy.",
+      "tip": "responsabilité 是阴性。"
+    },
+    {
+      "id": "ed-b1-03-03",
+      "lesson": "ed-b1-03",
+      "lemma": "hiérarchie",
+      "pos": "n.f.",
+      "gloss": "hierarchy",
+      "glossEn": "hierarchy",
+      "fr": "La {hiérarchie} décide trop lentement.",
+      "zh": "The hierarchy decides too slowly.",
+      "en": "The hierarchy decides too slowly.",
+      "tip": "hiérarchie 是阴性。"
+    },
+    {
+      "id": "ed-b1-03-04",
+      "lesson": "ed-b1-03",
+      "lemma": "promotion",
+      "pos": "n.f.",
+      "gloss": "promotion",
+      "glossEn": "promotion",
+      "fr": "Cette {promotion} change son rôle.",
+      "zh": "This promotion changes her role.",
+      "en": "This promotion changes her role.",
+      "tip": "promotion 在职场是升职。"
+    },
+    {
+      "id": "ed-b1-03-05",
+      "lesson": "ed-b1-03",
+      "lemma": "démission",
+      "pos": "n.f.",
+      "gloss": "resignation",
+      "glossEn": "resignation",
+      "fr": "Sa {démission} surprend l'équipe.",
+      "zh": "Her resignation surprises the team.",
+      "en": "Her resignation surprises the team.",
+      "tip": "donner sa démission。"
+    },
+    {
+      "id": "ed-b1-03-06",
+      "lesson": "ed-b1-03",
+      "lemma": "surcharge",
+      "pos": "n.f.",
+      "gloss": "overload",
+      "glossEn": "overload",
+      "fr": "Il part pour éviter la {surcharge}.",
+      "zh": "He is leaving to avoid overload.",
+      "en": "He is leaving to avoid overload.",
+      "tip": "pour + 原形表示目的。"
+    },
+    {
+      "id": "ed-b1-04-01",
+      "lesson": "ed-b1-04",
+      "lemma": "vrac",
+      "pos": "n.m.",
+      "gloss": "bulk",
+      "glossEn": "bulk",
+      "fr": "Le {vrac} est moins cher que le paquet.",
+      "zh": "Bulk goods are cheaper than the packet.",
+      "en": "Bulk goods are cheaper than the packet.",
+      "tip": "en vrac 是散装。moins...que。"
+    },
+    {
+      "id": "ed-b1-04-02",
+      "lesson": "ed-b1-04",
+      "lemma": "emballage",
+      "pos": "n.m.",
+      "gloss": "packaging",
+      "glossEn": "packaging",
+      "fr": "Cet {emballage} est le moins utile.",
+      "zh": "This packaging is the least useful.",
+      "en": "This packaging is the least useful.",
+      "tip": "le moins + 形容词，最高级。"
+    },
+    {
+      "id": "ed-b1-04-03",
+      "lesson": "ed-b1-04",
+      "lemma": "label",
+      "pos": "n.m.",
+      "gloss": "label",
+      "glossEn": "label",
+      "fr": "Ce {label} garantit une origine claire.",
+      "zh": "This label guarantees a clear origin.",
+      "en": "This label guarantees a clear origin.",
+      "tip": "label 是阳性。"
+    },
+    {
+      "id": "ed-b1-04-04",
+      "lesson": "ed-b1-04",
+      "lemma": "circulaire",
+      "pos": "adj.",
+      "gloss": "circular",
+      "glossEn": "circular",
+      "fr": "Une mode plus {circulaire} dure plus longtemps.",
+      "zh": "A more circular fashion lasts longer.",
+      "en": "A more circular fashion lasts longer.",
+      "tip": "plus + 形容词，放在名词后面。"
+    },
+    {
+      "id": "ed-b1-04-05",
+      "lesson": "ed-b1-04",
+      "lemma": "surconsommation",
+      "pos": "n.f.",
+      "gloss": "overconsumption",
+      "glossEn": "overconsumption",
+      "fr": "La {surconsommation} épuise les stocks.",
+      "zh": "Overconsumption drains the stocks.",
+      "en": "Overconsumption drains the stocks.",
+      "tip": "sur- 表示过度。"
+    },
+    {
+      "id": "ed-b1-04-06",
+      "lesson": "ed-b1-04",
+      "lemma": "invendu",
+      "pos": "n.m.",
+      "gloss": "unsold item",
+      "glossEn": "unsold item",
+      "fr": "Les {invendus} partent à prix bas.",
+      "zh": "Unsold items leave at a low price.",
+      "en": "Unsold items leave at a low price.",
+      "tip": "invendu 作名词是滞销品。"
+    },
+    {
+      "id": "ed-b1-05-01",
+      "lesson": "ed-b1-05",
+      "lemma": "francophonie",
+      "pos": "n.f.",
+      "gloss": "French-speaking world",
+      "glossEn": "French-speaking world",
+      "fr": "La {francophonie} réunit des accents très différents.",
+      "zh": "The French-speaking world brings together very different accents.",
+      "en": "The French-speaking world brings together very different accents.",
+      "tip": "francophonie 是阴性。"
+    },
+    {
+      "id": "ed-b1-05-02",
+      "lesson": "ed-b1-05",
+      "lemma": "expatrié",
+      "pos": "n.",
+      "gloss": "expatriate",
+      "glossEn": "expatriate",
+      "fr": "L'{expatrié} avait déjà une vie là-bas.",
+      "zh": "The expatriate already had a life there.",
+      "en": "The expatriate already had a life there.",
+      "tip": "在搬走之前就已经有生活，用愈过去时 avait。女性 expatriée。"
+    },
+    {
+      "id": "ed-b1-05-03",
+      "lesson": "ed-b1-05",
+      "lemma": "diversité",
+      "pos": "n.f.",
+      "gloss": "diversity",
+      "glossEn": "diversity",
+      "fr": "Cette {diversité}, je l'avais sous-estimée.",
+      "zh": "This diversity — I had underestimated it.",
+      "en": "This diversity — I had underestimated it.",
+      "tip": "l' 在助动词前，diversité 阴性，sous-estimée 加 e。"
+    },
+    {
+      "id": "ed-b1-05-04",
+      "lesson": "ed-b1-05",
+      "lemma": "anglicisme",
+      "pos": "n.m.",
+      "gloss": "Anglicism",
+      "glossEn": "Anglicism",
+      "fr": "Cet {anglicisme} remplace un mot plus vieux.",
+      "zh": "This Anglicism replaces an older word.",
+      "en": "This Anglicism replaces an older word.",
+      "tip": "anglicisme 是阳性。"
+    },
+    {
+      "id": "ed-b1-05-05",
+      "lesson": "ed-b1-05",
+      "lemma": "bilinguisme",
+      "pos": "n.m.",
+      "gloss": "bilingualism",
+      "glossEn": "bilingualism",
+      "fr": "Le {bilinguisme} ouvre deux marchés.",
+      "zh": "Bilingualism opens two markets.",
+      "en": "Bilingualism opens two markets.",
+      "tip": "bilinguisme 是阳性。"
+    },
+    {
+      "id": "ed-b1-05-06",
+      "lesson": "ed-b1-05",
+      "lemma": "locuteur",
+      "pos": "n.",
+      "gloss": "speaker",
+      "glossEn": "speaker",
+      "fr": "Le {locuteur} natif corrige doucement.",
+      "zh": "The native speaker corrects gently.",
+      "en": "The native speaker corrects gently.",
+      "tip": "女性是 locutrice。"
+    },
+    {
+      "id": "ed-b1-06-01",
+      "lesson": "ed-b1-06",
+      "lemma": "canular",
+      "pos": "n.m.",
+      "gloss": "hoax",
+      "glossEn": "hoax",
+      "fr": "Ce {canular} a circulé rapidement.",
+      "zh": "This hoax spread quickly.",
+      "en": "This hoax spread quickly.",
+      "tip": "rapidement 来自 rapide + ment。"
+    },
+    {
+      "id": "ed-b1-06-02",
+      "lesson": "ed-b1-06",
+      "lemma": "sensation",
+      "pos": "n.f.",
+      "gloss": "sensation",
+      "glossEn": "sensation",
+      "fr": "La {sensation} compte plus que la preuve.",
+      "zh": "The sensation counts more than the proof.",
+      "en": "The sensation counts more than the proof.",
+      "tip": "sensation 是阴性。"
+    },
+    {
+      "id": "ed-b1-06-03",
+      "lesson": "ed-b1-06",
+      "lemma": "indépendance",
+      "pos": "n.f.",
+      "gloss": "independence",
+      "glossEn": "independence",
+      "fr": "L'{indépendance} du journal reste fragile.",
+      "zh": "The paper's independence stays fragile.",
+      "en": "The paper's independence stays fragile.",
+      "tip": "indépendance 是阴性。"
+    },
+    {
+      "id": "ed-b1-06-04",
+      "lesson": "ed-b1-06",
+      "lemma": "vérification",
+      "pos": "n.f.",
+      "gloss": "verification",
+      "glossEn": "verification",
+      "fr": "La {vérification} des faits prend du temps.",
+      "zh": "Fact-checking takes time.",
+      "en": "Fact-checking takes time.",
+      "tip": "名词化：vérifier → vérification。"
+    },
+    {
+      "id": "ed-b1-06-05",
+      "lesson": "ed-b1-06",
+      "lemma": "rumeur",
+      "pos": "n.f.",
+      "gloss": "rumour",
+      "glossEn": "rumour",
+      "fr": "La {rumeur} va plus vite que l'article.",
+      "zh": "The rumour travels faster than the article.",
+      "en": "The rumour travels faster than the article.",
+      "tip": "rumeur 是阴性。"
+    },
+    {
+      "id": "ed-b1-06-06",
+      "lesson": "ed-b1-06",
+      "lemma": "source",
+      "pos": "n.f.",
+      "gloss": "source",
+      "glossEn": "source",
+      "fr": "Chaque {source} doit être nommée.",
+      "zh": "Every source must be named.",
+      "en": "Every source must be named.",
+      "tip": "source 是阴性。"
+    },
+    {
+      "id": "ed-b1-07-01",
+      "lesson": "ed-b1-07",
+      "lemma": "regret",
+      "pos": "n.m.",
+      "gloss": "regret",
+      "glossEn": "regret",
+      "fr": "Ce {regret} date du dernier voyage.",
+      "zh": "This regret dates from the last trip.",
+      "en": "This regret dates from the last trip.",
+      "tip": "avoir un regret。"
+    },
+    {
+      "id": "ed-b1-07-02",
+      "lesson": "ed-b1-07",
+      "lemma": "budget",
+      "pos": "n.m.",
+      "gloss": "budget",
+      "glossEn": "budget",
+      "fr": "Si j'avais eu le {budget}, j'aurais continué.",
+      "zh": "If I had had the budget, I would have continued.",
+      "en": "If I had had the budget, I would have continued.",
+      "tip": "si + 愈过去时 avais eu，主句 aurais continué。"
+    },
+    {
+      "id": "ed-b1-07-03",
+      "lesson": "ed-b1-07",
+      "lemma": "détour",
+      "pos": "n.m.",
+      "gloss": "detour",
+      "glossEn": "detour",
+      "fr": "Ce {détour} aurait pris deux heures.",
+      "zh": "This detour would have taken two hours.",
+      "en": "This detour would have taken two hours.",
+      "tip": "条件式过去 aurait pris。"
+    },
+    {
+      "id": "ed-b1-07-04",
+      "lesson": "ed-b1-07",
+      "lemma": "compagnon",
+      "pos": "n.",
+      "gloss": "companion",
+      "glossEn": "companion",
+      "fr": "Mon {compagnon} de route était fatigué.",
+      "zh": "My travelling companion was tired.",
+      "en": "My travelling companion was tired.",
+      "tip": "女性是 compagne。"
+    },
+    {
+      "id": "ed-b1-07-05",
+      "lesson": "ed-b1-07",
+      "lemma": "rêve",
+      "pos": "n.m.",
+      "gloss": "dream",
+      "glossEn": "dream",
+      "fr": "Ce {rêve} de voyage reste entier.",
+      "zh": "This travel dream is still intact.",
+      "en": "This travel dream is still intact.",
+      "tip": "rêve 是阳性。"
+    },
+    {
+      "id": "ed-b1-07-06",
+      "lesson": "ed-b1-07",
+      "lemma": "correspondance",
+      "pos": "n.f.",
+      "gloss": "connection",
+      "glossEn": "connection",
+      "fr": "La {correspondance} à Lyon était trop courte.",
+      "zh": "The connection in Lyon was too short.",
+      "en": "The connection in Lyon was too short.",
+      "tip": "火车换乘也叫 correspondance。"
+    },
+    {
+      "id": "ed-b1-08-01",
+      "lesson": "ed-b1-08",
+      "lemma": "empreinte",
+      "pos": "n.f.",
+      "gloss": "footprint",
+      "glossEn": "footprint",
+      "fr": "Cette {empreinte}, il faut la réduire.",
+      "zh": "This footprint — it has to be reduced.",
+      "en": "This footprint — it has to be reduced.",
+      "tip": "先把 empreinte 放在句首，la 再指它。"
+    },
+    {
+      "id": "ed-b1-08-02",
+      "lesson": "ed-b1-08",
+      "lemma": "renouvelable",
+      "pos": "adj.",
+      "gloss": "renewable",
+      "glossEn": "renewable",
+      "fr": "Une énergie plus {renouvelable} coûte encore cher.",
+      "zh": "More renewable energy still costs a lot.",
+      "en": "More renewable energy still costs a lot.",
+      "tip": "renouvelable 阴阳同形。"
+    },
+    {
+      "id": "ed-b1-08-03",
+      "lesson": "ed-b1-08",
+      "lemma": "tri",
+      "pos": "n.m.",
+      "gloss": "sorting",
+      "glossEn": "sorting",
+      "fr": "Le {tri} contribue à moins de gaspillage.",
+      "zh": "Sorting contributes to less waste.",
+      "en": "Sorting contributes to less waste.",
+      "tip": "contribuer à。tri 是阳性。"
+    },
+    {
+      "id": "ed-b1-08-04",
+      "lesson": "ed-b1-08",
+      "lemma": "climatique",
+      "pos": "adj.",
+      "gloss": "climate",
+      "glossEn": "climate",
+      "fr": "Le risque {climatique} grandit.",
+      "zh": "The climate risk is growing.",
+      "en": "The climate risk is growing.",
+      "tip": "climatique 放在名词后面。"
+    },
+    {
+      "id": "ed-b1-08-05",
+      "lesson": "ed-b1-08",
+      "lemma": "serre",
+      "pos": "n.f.",
+      "gloss": "greenhouse",
+      "glossEn": "greenhouse",
+      "fr": "L'effet de {serre} réchauffe la planète.",
+      "zh": "The greenhouse effect warms the planet.",
+      "en": "The greenhouse effect warms the planet.",
+      "tip": "effet de serre。"
+    },
+    {
+      "id": "ed-b1-08-06",
+      "lesson": "ed-b1-08",
+      "lemma": "geste",
+      "pos": "n.m.",
+      "gloss": "gesture",
+      "glossEn": "gesture",
+      "fr": "Chaque {geste} compte, même petit.",
+      "zh": "Every gesture counts, even a small one.",
+      "en": "Every gesture counts, even a small one.",
+      "tip": "un geste pour la planète。"
+    },
+    {
+      "id": "ed-b1-09-01",
+      "lesson": "ed-b1-09",
+      "lemma": "propriété",
+      "pos": "n.f.",
+      "gloss": "property",
+      "glossEn": "property",
+      "fr": "Cette {propriété} vide attend un projet.",
+      "zh": "This empty property is waiting for a project.",
+      "en": "This empty property is waiting for a project.",
+      "tip": "propriété 在这里是一处房产。"
+    },
+    {
+      "id": "ed-b1-09-02",
+      "lesson": "ed-b1-09",
+      "lemma": "bien-être",
+      "pos": "n.m.",
+      "gloss": "well-being",
+      "glossEn": "well-being",
+      "fr": "Le {bien-être} en ville dépend du silence.",
+      "zh": "Well-being in the city depends on quiet.",
+      "en": "Well-being in the city depends on quiet.",
+      "tip": "bien-être 阳性，连字符保留。"
+    },
+    {
+      "id": "ed-b1-09-03",
+      "lesson": "ed-b1-09",
+      "lemma": "graffiti",
+      "pos": "n.m.",
+      "gloss": "graffiti",
+      "glossEn": "graffiti",
+      "fr": "Ce {graffiti} couvre tout le mur.",
+      "zh": "This graffiti covers the whole wall.",
+      "en": "This graffiti covers the whole wall.",
+      "tip": "graffiti 在法语里常作阳性单数。"
+    },
+    {
+      "id": "ed-b1-09-04",
+      "lesson": "ed-b1-09",
+      "lemma": "réclamation",
+      "pos": "n.f.",
+      "gloss": "complaint",
+      "glossEn": "complaint",
+      "fr": "Sa {réclamation} est partie hier.",
+      "zh": "Her complaint went out yesterday.",
+      "en": "Her complaint went out yesterday.",
+      "tip": "réclamation 是正式的投诉。"
+    },
+    {
+      "id": "ed-b1-09-05",
+      "lesson": "ed-b1-09",
+      "lemma": "piéton",
+      "pos": "n.",
+      "gloss": "pedestrian",
+      "glossEn": "pedestrian",
+      "fr": "Quelques {piétons} traversent hors du passage.",
+      "zh": "A few pedestrians cross outside the crossing.",
+      "en": "A few pedestrians cross outside the crossing.",
+      "tip": "quelques 后面用复数。女性 piétonne。"
+    },
+    {
+      "id": "ed-b1-09-06",
+      "lesson": "ed-b1-09",
+      "lemma": "circulation",
+      "pos": "n.f.",
+      "gloss": "traffic",
+      "glossEn": "traffic",
+      "fr": "Elle dit que la {circulation} empire.",
+      "zh": "She says the traffic is getting worse.",
+      "en": "She says the traffic is getting worse.",
+      "tip": "dire que + 直陈式 empire。"
+    },
+    {
+      "id": "ed-b1-10-01",
+      "lesson": "ed-b1-10",
+      "lemma": "philosophie",
+      "pos": "n.f.",
+      "gloss": "philosophy",
+      "glossEn": "philosophy",
+      "fr": "La {philosophie} ouvre plus de questions que de réponses.",
+      "zh": "Philosophy opens more questions than answers.",
+      "en": "Philosophy opens more questions than answers.",
+      "tip": "philosophie 是阴性。"
+    },
+    {
+      "id": "ed-b1-10-02",
+      "lesson": "ed-b1-10",
+      "lemma": "méfiance",
+      "pos": "n.f.",
+      "gloss": "distrust",
+      "glossEn": "distrust",
+      "fr": "Sa {méfiance} vient d'un mauvais cours.",
+      "zh": "His distrust comes from a bad class.",
+      "en": "His distrust comes from a bad class.",
+      "tip": "méfiance 是阴性。à cause de 可以换成：à cause d'un mauvais cours。"
+    },
+    {
+      "id": "ed-b1-10-03",
+      "lesson": "ed-b1-10",
+      "lemma": "connaissance",
+      "pos": "n.f.",
+      "gloss": "knowledge",
+      "glossEn": "knowledge",
+      "fr": "Cette {connaissance} sert toute la vie.",
+      "zh": "This knowledge is useful for life.",
+      "en": "This knowledge is useful for life.",
+      "tip": "connaissance 也表示认识的人，这里是知识。"
+    },
+    {
+      "id": "ed-b1-10-04",
+      "lesson": "ed-b1-10",
+      "lemma": "cursus",
+      "pos": "n.m.",
+      "gloss": "programme of study",
+      "glossEn": "programme of study",
+      "fr": "Le {cursus} dure trois ans.",
+      "zh": "The programme lasts three years.",
+      "en": "The programme lasts three years.",
+      "tip": "cursus 的 s 不发音。"
+    },
+    {
+      "id": "ed-b1-10-05",
+      "lesson": "ed-b1-10",
+      "lemma": "apprentissage",
+      "pos": "n.m.",
+      "gloss": "apprenticeship",
+      "glossEn": "apprenticeship",
+      "fr": "L'{apprentissage} en entreprise complète les cours.",
+      "zh": "Apprenticeship in a company completes the classes.",
+      "en": "Apprenticeship in a company completes the classes.",
+      "tip": "apprentissage 是阳性。"
+    },
+    {
+      "id": "ed-b1-10-06",
+      "lesson": "ed-b1-10",
+      "lemma": "satisfaction",
+      "pos": "n.f.",
+      "gloss": "satisfaction",
+      "glossEn": "satisfaction",
+      "fr": "Sa {satisfaction} se voit après l'examen.",
+      "zh": "His satisfaction shows after the exam.",
+      "en": "His satisfaction shows after the exam.",
+      "tip": "satisfaction 是阴性。"
+    },
+    {
+      "id": "ed-b1-11-01",
+      "lesson": "ed-b1-11",
+      "lemma": "bienfait",
+      "pos": "n.m.",
+      "gloss": "benefit",
+      "glossEn": "benefit",
+      "fr": "Les {bienfaits} du sport se voient vite.",
+      "zh": "The benefits of sport show quickly.",
+      "en": "The benefits of sport show quickly.",
+      "tip": "bienfait 常用复数。"
+    },
+    {
+      "id": "ed-b1-11-02",
+      "lesson": "ed-b1-11",
+      "lemma": "endurance",
+      "pos": "n.f.",
+      "gloss": "endurance",
+      "glossEn": "endurance",
+      "fr": "L'{endurance} se construit lentement.",
+      "zh": "Endurance is built slowly.",
+      "en": "Endurance is built slowly.",
+      "tip": "endurance 是阴性。"
+    },
+    {
+      "id": "ed-b1-11-03",
+      "lesson": "ed-b1-11",
+      "lemma": "échauffement",
+      "pos": "n.m.",
+      "gloss": "warm-up",
+      "glossEn": "warm-up",
+      "fr": "Cet {échauffement}, je te le montre.",
+      "zh": "This warm-up — I'll show it to you.",
+      "en": "This warm-up — I'll show it to you.",
+      "tip": "te 在 le 前面：je te le montre。"
+    },
+    {
+      "id": "ed-b1-11-04",
+      "lesson": "ed-b1-11",
+      "lemma": "compétition",
+      "pos": "n.f.",
+      "gloss": "competition",
+      "glossEn": "competition",
+      "fr": "Quand tu auras fini la {compétition}, on part.",
+      "zh": "When you have finished the competition, we leave.",
+      "en": "When you have finished the competition, we leave.",
+      "tip": "先将来时 auras fini。"
+    },
+    {
+      "id": "ed-b1-11-05",
+      "lesson": "ed-b1-11",
+      "lemma": "dépense",
+      "pos": "n.f.",
+      "gloss": "expenditure",
+      "glossEn": "expenditure",
+      "fr": "Cette {dépense} d'énergie reste raisonnable.",
+      "zh": "This energy expenditure stays reasonable.",
+      "en": "This energy expenditure stays reasonable.",
+      "tip": "dépense 是阴性。"
+    },
+    {
+      "id": "ed-b1-11-06",
+      "lesson": "ed-b1-11",
+      "lemma": "club",
+      "pos": "n.m.",
+      "gloss": "club",
+      "glossEn": "club",
+      "fr": "Le {club} ouvre à sept heures.",
+      "zh": "The club opens at seven.",
+      "en": "The club opens at seven.",
+      "tip": "club 是阳性。"
+    },
+    {
+      "id": "ed-b1-12-01",
+      "lesson": "ed-b1-12",
+      "lemma": "talent",
+      "pos": "n.m.",
+      "gloss": "talent",
+      "glossEn": "talent",
+      "fr": "Son {talent} se voit dès la première page.",
+      "zh": "His talent shows from the first page.",
+      "en": "His talent shows from the first page.",
+      "tip": "talent 是阳性。"
+    },
+    {
+      "id": "ed-b1-12-02",
+      "lesson": "ed-b1-12",
+      "lemma": "biographie",
+      "pos": "n.f.",
+      "gloss": "biography",
+      "glossEn": "biography",
+      "fr": "Cette {biographie} raconte une vie entière.",
+      "zh": "This biography tells a whole life.",
+      "en": "This biography tells a whole life.",
+      "tip": "biographie 是阴性。"
+    },
+    {
+      "id": "ed-b1-12-03",
+      "lesson": "ed-b1-12",
+      "lemma": "exposition",
+      "pos": "n.f.",
+      "gloss": "exhibition",
+      "glossEn": "exhibition",
+      "fr": "L'{exposition} ouvre malgré la pluie.",
+      "zh": "The exhibition opens despite the rain.",
+      "en": "The exhibition opens despite the rain.",
+      "tip": "malgré + 名词，也是让步，但不用虚拟式。"
+    },
+    {
+      "id": "ed-b1-12-04",
+      "lesson": "ed-b1-12",
+      "lemma": "roman",
+      "pos": "n.m.",
+      "gloss": "novel",
+      "glossEn": "novel",
+      "fr": "Bien que le {roman} soit dur, il plaît.",
+      "zh": "Although the novel is harsh, people like it.",
+      "en": "Although the novel is harsh, people like it.",
+      "tip": "bien que + 虚拟式 soit。"
+    },
+    {
+      "id": "ed-b1-12-05",
+      "lesson": "ed-b1-12",
+      "lemma": "toile",
+      "pos": "n.f.",
+      "gloss": "canvas",
+      "glossEn": "canvas",
+      "fr": "L'artiste publia cette {toile} en 1920.",
+      "zh": "The artist published this canvas in 1920.",
+      "en": "The artist published this canvas in 1920.",
+      "tip": "publia 是简单过去时，书面传记里常见。"
+    },
+    {
+      "id": "ed-b1-12-06",
+      "lesson": "ed-b1-12",
+      "lemma": "œuvre",
+      "pos": "n.f.",
+      "gloss": "work",
+      "glossEn": "work",
+      "fr": "Cette {œuvre} reste après l'auteur.",
+      "zh": "This work remains after its author.",
+      "en": "This work remains after its author.",
+      "tip": "œuvre 是阴性，œ 也可以写成 oe。"
+    },
+    {
+      "id": "ed-b2-01-01",
+      "lesson": "ed-b2-01",
+      "lemma": "urgence",
+      "pos": "n.f.",
+      "gloss": "urgency",
+      "glossEn": "urgency",
+      "fr": "L'{urgence} climatique ne se discute plus.",
+      "zh": "The climate emergency is no longer debated.",
+      "en": "The climate emergency is no longer debated.",
+      "tip": "urgence 是阴性。"
+    },
+    {
+      "id": "ed-b2-01-02",
+      "lesson": "ed-b2-01",
+      "lemma": "indignation",
+      "pos": "n.f.",
+      "gloss": "indignation",
+      "glossEn": "indignation",
+      "fr": "Son {indignation} est claire et argumentée.",
+      "zh": "Her indignation is clear and argued.",
+      "en": "Her indignation is clear and argued.",
+      "tip": "indignation 是阴性。"
+    },
+    {
+      "id": "ed-b2-01-03",
+      "lesson": "ed-b2-01",
+      "lemma": "écogeste",
+      "pos": "n.m.",
+      "gloss": "eco-friendly habit",
+      "glossEn": "eco-friendly habit",
+      "fr": "Chaque {écogeste} compte dans la semaine.",
+      "zh": "Every eco-friendly habit counts during the week.",
+      "en": "Every eco-friendly habit counts during the week.",
+      "tip": "écogeste 是阳性。"
+    },
+    {
+      "id": "ed-b2-01-04",
+      "lesson": "ed-b2-01",
+      "lemma": "sensibilisation",
+      "pos": "n.f.",
+      "gloss": "awareness-raising",
+      "glossEn": "awareness-raising",
+      "fr": "La {sensibilisation} commence à l'école.",
+      "zh": "Awareness-raising starts at school.",
+      "en": "Awareness-raising starts at school.",
+      "tip": "sensibilisation 是阴性。"
+    },
+    {
+      "id": "ed-b2-01-05",
+      "lesson": "ed-b2-01",
+      "lemma": "fonds",
+      "pos": "n.m.",
+      "gloss": "seabed",
+      "glossEn": "seabed",
+      "fr": "Les {fonds} marins restent mal connus.",
+      "zh": "The seabed stays poorly known.",
+      "en": "The seabed stays poorly known.",
+      "tip": "fonds marins，fonds 的 s 不发音。"
+    },
+    {
+      "id": "ed-b2-01-06",
+      "lesson": "ed-b2-01",
+      "lemma": "écoféminisme",
+      "pos": "n.m.",
+      "gloss": "ecofeminism",
+      "glossEn": "ecofeminism",
+      "fr": "L'{écoféminisme} lie écologie et égalité.",
+      "zh": "Ecofeminism links ecology and equality.",
+      "en": "Ecofeminism links ecology and equality.",
+      "tip": "écoféminisme 是阳性。"
+    },
+    {
+      "id": "ed-b2-02-01",
+      "lesson": "ed-b2-02",
+      "lemma": "greenwashing",
+      "pos": "n.m.",
+      "gloss": "greenwashing",
+      "glossEn": "greenwashing",
+      "fr": "Ce {greenwashing}, je te l'explique.",
+      "zh": "This greenwashing — I'll explain it to you.",
+      "en": "This greenwashing — I'll explain it to you.",
+      "tip": "te 在 le 前面。greenwashing 在法语里常作阳性外来词。"
+    },
+    {
+      "id": "ed-b2-02-02",
+      "lesson": "ed-b2-02",
+      "lemma": "circuit",
+      "pos": "n.m.",
+      "gloss": "circuit",
+      "glossEn": "circuit",
+      "fr": "Le {circuit} court paie mieux le producteur.",
+      "zh": "The short supply chain pays the producer better.",
+      "en": "The short supply chain pays the producer better.",
+      "tip": "circuit court。"
+    },
+    {
+      "id": "ed-b2-02-03",
+      "lesson": "ed-b2-02",
+      "lemma": "monnaie",
+      "pos": "n.f.",
+      "gloss": "currency",
+      "glossEn": "currency",
+      "fr": "Je doute que cette {monnaie} locale dure.",
+      "zh": "I doubt this local currency will last.",
+      "en": "I doubt this local currency will last.",
+      "tip": "douter que + 虚拟式 dure。"
+    },
+    {
+      "id": "ed-b2-02-04",
+      "lesson": "ed-b2-02",
+      "lemma": "déception",
+      "pos": "n.f.",
+      "gloss": "disappointment",
+      "glossEn": "disappointment",
+      "fr": "Sa {déception} après l'achat est totale.",
+      "zh": "Her disappointment after the purchase is total.",
+      "en": "Her disappointment after the purchase is total.",
+      "tip": "déception 是阴性。"
+    },
+    {
+      "id": "ed-b2-02-05",
+      "lesson": "ed-b2-02",
+      "lemma": "influenceur",
+      "pos": "n.",
+      "gloss": "influencer",
+      "glossEn": "influencer",
+      "fr": "Cet {influenceur} vend plus qu'il n'informe.",
+      "zh": "This influencer sells more than he informs.",
+      "en": "This influencer sells more than he informs.",
+      "tip": "女性是 influenceuse。ne...que 的书面对比有时用 ne explétif：plus qu'il n'informe。"
+    },
+    {
+      "id": "ed-b2-02-06",
+      "lesson": "ed-b2-02",
+      "lemma": "étiquette",
+      "pos": "n.f.",
+      "gloss": "label",
+      "glossEn": "label",
+      "fr": "L'{étiquette} promet une origine locale.",
+      "zh": "The label promises a local origin.",
+      "en": "The label promises a local origin.",
+      "tip": "étiquette 是阴性。别和已经学过的 label 混成同一个词：这里是贴在商品上的标签。"
+    },
+    {
+      "id": "ed-b2-03-01",
+      "lesson": "ed-b2-03",
+      "lemma": "mixité",
+      "pos": "n.f.",
+      "gloss": "social mix",
+      "glossEn": "social mix",
+      "fr": "Si la {mixité} avance, l'école changera.",
+      "zh": "If the social mix improves, school will change.",
+      "en": "If the social mix improves, school will change.",
+      "tip": "si + 现在时，主句将来时。"
+    },
+    {
+      "id": "ed-b2-03-02",
+      "lesson": "ed-b2-03",
+      "lemma": "gratuité",
+      "pos": "n.f.",
+      "gloss": "free access",
+      "glossEn": "free access",
+      "fr": "Si la {gratuité} existait, plus de gens étudieraient.",
+      "zh": "If free tuition existed, more people would study.",
+      "en": "If free tuition existed, more people would study.",
+      "tip": "si + 未完成过去时，主句条件式。"
+    },
+    {
+      "id": "ed-b2-03-03",
+      "lesson": "ed-b2-03",
+      "lemma": "phygital",
+      "pos": "adj.",
+      "gloss": "phygital",
+      "glossEn": "phygital",
+      "fr": "Le bureau {phygital} mélange présence et écran.",
+      "zh": "The phygital office mixes being there and the screen.",
+      "en": "The phygital office mixes being there and the screen.",
+      "tip": "phygital 阴阳同形，指线上线下混合。"
+    },
+    {
+      "id": "ed-b2-03-04",
+      "lesson": "ed-b2-03",
+      "lemma": "dispositif",
+      "pos": "n.m.",
+      "gloss": "scheme",
+      "glossEn": "scheme",
+      "fr": "Ce {dispositif} aide les décrocheurs.",
+      "zh": "This scheme helps students who drop out.",
+      "en": "This scheme helps students who drop out.",
+      "tip": "dispositif 是阳性。"
+    },
+    {
+      "id": "ed-b2-03-05",
+      "lesson": "ed-b2-03",
+      "lemma": "parcours",
+      "pos": "n.m.",
+      "gloss": "path",
+      "glossEn": "path",
+      "fr": "Son {parcours} n'est pas une ligne droite.",
+      "zh": "His path is not a straight line.",
+      "en": "His path is not a straight line.",
+      "tip": "parcours 的 s 不发音。"
+    },
+    {
+      "id": "ed-b2-03-06",
+      "lesson": "ed-b2-03",
+      "lemma": "insertion",
+      "pos": "n.f.",
+      "gloss": "integration into work",
+      "glossEn": "integration into work",
+      "fr": "L'{insertion} professionnelle prend du temps.",
+      "zh": "Getting into work takes time.",
+      "en": "Getting into work takes time.",
+      "tip": "insertion 是阴性。"
+    },
+    {
+      "id": "ed-b2-04-01",
+      "lesson": "ed-b2-04",
+      "lemma": "algorithme",
+      "pos": "n.m.",
+      "gloss": "algorithm",
+      "glossEn": "algorithm",
+      "fr": "L'{algorithme} qui te connaît ne s'arrête plus.",
+      "zh": "The algorithm that knows you no longer stops.",
+      "en": "The algorithm that knows you no longer stops.",
+      "tip": "ne...plus。qui 代替主语。"
+    },
+    {
+      "id": "ed-b2-04-02",
+      "lesson": "ed-b2-04",
+      "lemma": "donnée",
+      "pos": "n.f.",
+      "gloss": "data",
+      "glossEn": "data",
+      "fr": "Ces {données} voyagent sans ton accord.",
+      "zh": "This data travels without your consent.",
+      "en": "This data travels without your consent.",
+      "tip": "donnée 作“数据”常用复数 données。"
+    },
+    {
+      "id": "ed-b2-04-03",
+      "lesson": "ed-b2-04",
+      "lemma": "déconnexion",
+      "pos": "n.f.",
+      "gloss": "disconnection",
+      "glossEn": "disconnection",
+      "fr": "La {déconnexion} devient un choix.",
+      "zh": "Switching off is becoming a choice.",
+      "en": "Switching off is becoming a choice.",
+      "tip": "déconnexion 是阴性。"
+    },
+    {
+      "id": "ed-b2-04-04",
+      "lesson": "ed-b2-04",
+      "lemma": "notification",
+      "pos": "n.f.",
+      "gloss": "notification",
+      "glossEn": "notification",
+      "fr": "Chaque {notification} coupe le travail.",
+      "zh": "Every notification cuts into the work.",
+      "en": "Every notification cuts into the work.",
+      "tip": "notification 是阴性。"
+    },
+    {
+      "id": "ed-b2-04-05",
+      "lesson": "ed-b2-04",
+      "lemma": "confidentialité",
+      "pos": "n.f.",
+      "gloss": "confidentiality",
+      "glossEn": "confidentiality",
+      "fr": "La {confidentialité} de ce compte est faible.",
+      "zh": "The confidentiality of this account is weak.",
+      "en": "The confidentiality of this account is weak.",
+      "tip": "confidentialité 是阴性。"
+    },
+    {
+      "id": "ed-b2-04-06",
+      "lesson": "ed-b2-04",
+      "lemma": "trace",
+      "pos": "n.f.",
+      "gloss": "trace",
+      "glossEn": "trace",
+      "fr": "Cette {trace} numérique reste des années.",
+      "zh": "This digital trace stays for years.",
+      "en": "This digital trace stays for years.",
+      "tip": "trace 是阴性。"
+    },
+    {
+      "id": "ed-b2-05-01",
+      "lesson": "ed-b2-05",
+      "lemma": "patrimoine",
+      "pos": "n.m.",
+      "gloss": "heritage",
+      "glossEn": "heritage",
+      "fr": "Elle a dit que le {patrimoine} était menacé.",
+      "zh": "She said the heritage was under threat.",
+      "en": "She said the heritage was under threat.",
+      "tip": "原话是现在时，转述到过去后变成 était。"
+    },
+    {
+      "id": "ed-b2-05-02",
+      "lesson": "ed-b2-05",
+      "lemma": "commémoration",
+      "pos": "n.f.",
+      "gloss": "commemoration",
+      "glossEn": "commemoration",
+      "fr": "La {commémoration} a lieu chaque novembre.",
+      "zh": "The commemoration takes place every November.",
+      "en": "The commemoration takes place every November.",
+      "tip": "commémoration 是阴性。"
+    },
+    {
+      "id": "ed-b2-05-03",
+      "lesson": "ed-b2-05",
+      "lemma": "archive",
+      "pos": "n.f.",
+      "gloss": "archive",
+      "glossEn": "archive",
+      "fr": "Les {archives} avaient déjà disparu.",
+      "zh": "The archives had already disappeared.",
+      "en": "The archives had already disappeared.",
+      "tip": "在他到达之前就已经消失，用愈过去时。archive 常用复数。"
+    },
+    {
+      "id": "ed-b2-05-04",
+      "lesson": "ed-b2-05",
+      "lemma": "héritage",
+      "pos": "n.m.",
+      "gloss": "inheritance",
+      "glossEn": "inheritance",
+      "fr": "Cet {héritage} pèse encore sur le présent.",
+      "zh": "This inheritance still weighs on the present.",
+      "en": "This inheritance still weighs on the present.",
+      "tip": "héritage 是阳性。"
+    },
+    {
+      "id": "ed-b2-05-05",
+      "lesson": "ed-b2-05",
+      "lemma": "colonisation",
+      "pos": "n.f.",
+      "gloss": "colonisation",
+      "glossEn": "colonisation",
+      "fr": "La {colonisation} a laissé des traces durables.",
+      "zh": "Colonisation left lasting traces.",
+      "en": "Colonisation left lasting traces.",
+      "tip": "colonisation 是阴性。"
+    },
+    {
+      "id": "ed-b2-05-06",
+      "lesson": "ed-b2-05",
+      "lemma": "vestige",
+      "pos": "n.m.",
+      "gloss": "vestige",
+      "glossEn": "vestige",
+      "fr": "Ce {vestige} date du XIXe siècle.",
+      "zh": "This vestige dates from the 19th century.",
+      "en": "This vestige dates from the 19th century.",
+      "tip": "vestige 是阳性。"
+    },
+    {
+      "id": "ed-b2-06-01",
+      "lesson": "ed-b2-06",
+      "lemma": "expédition",
+      "pos": "n.f.",
+      "gloss": "expedition",
+      "glossEn": "expedition",
+      "fr": "Bien que l'{expédition} soit risquée, ils partent.",
+      "zh": "Although the expedition is risky, they leave.",
+      "en": "Although the expedition is risky, they leave.",
+      "tip": "bien que + 虚拟式 soit。"
+    },
+    {
+      "id": "ed-b2-06-02",
+      "lesson": "ed-b2-06",
+      "lemma": "horizon",
+      "pos": "n.m.",
+      "gloss": "horizon",
+      "glossEn": "horizon",
+      "fr": "L'{horizon} reste vide depuis des heures.",
+      "zh": "The horizon has stayed empty for hours.",
+      "en": "The horizon has stayed empty for hours.",
+      "tip": "horizon 是阳性。"
+    },
+    {
+      "id": "ed-b2-06-03",
+      "lesson": "ed-b2-06",
+      "lemma": "équipage",
+      "pos": "n.m.",
+      "gloss": "crew",
+      "glossEn": "crew",
+      "fr": "L'{équipage} dort à tour de rôle.",
+      "zh": "The crew sleeps in turns.",
+      "en": "The crew sleeps in turns.",
+      "tip": "équipage 是阳性，集体名词。"
+    },
+    {
+      "id": "ed-b2-06-04",
+      "lesson": "ed-b2-06",
+      "lemma": "traversée",
+      "pos": "n.f.",
+      "gloss": "crossing",
+      "glossEn": "crossing",
+      "fr": "La {traversée} est un peu plus longue que prévu.",
+      "zh": "The crossing is a little longer than planned.",
+      "en": "The crossing is a little longer than planned.",
+      "tip": "un peu plus 把比较说得不那么绝对。"
+    },
+    {
+      "id": "ed-b2-06-05",
+      "lesson": "ed-b2-06",
+      "lemma": "croisière",
+      "pos": "n.f.",
+      "gloss": "cruise",
+      "glossEn": "cruise",
+      "fr": "Cette {croisière} évite les grands ports.",
+      "zh": "This cruise avoids the big ports.",
+      "en": "This cruise avoids the big ports.",
+      "tip": "croisière 是阴性。"
+    },
+    {
+      "id": "ed-b2-06-06",
+      "lesson": "ed-b2-06",
+      "lemma": "phare",
+      "pos": "n.m.",
+      "gloss": "lighthouse",
+      "glossEn": "lighthouse",
+      "fr": "Le {phare} signale la côte la nuit.",
+      "zh": "The lighthouse marks the coast at night.",
+      "en": "The lighthouse marks the coast at night.",
+      "tip": "phare 是阳性。"
+    },
+    {
+      "id": "ed-b2-07-01",
+      "lesson": "ed-b2-07",
+      "lemma": "désinformation",
+      "pos": "n.f.",
+      "gloss": "disinformation",
+      "glossEn": "disinformation",
+      "fr": "La {désinformation} a donc circulé plus vite.",
+      "zh": "Disinformation therefore spread faster.",
+      "en": "Disinformation therefore spread faster.",
+      "tip": "donc 连接原因和结果。"
+    },
+    {
+      "id": "ed-b2-07-02",
+      "lesson": "ed-b2-07",
+      "lemma": "fiabilité",
+      "pos": "n.f.",
+      "gloss": "reliability",
+      "glossEn": "reliability",
+      "fr": "La {fiabilité} de ce site est faible.",
+      "zh": "The reliability of this site is low.",
+      "en": "The reliability of this site is low.",
+      "tip": "fiabilité 是阴性。"
+    },
+    {
+      "id": "ed-b2-07-03",
+      "lesson": "ed-b2-07",
+      "lemma": "manchette",
+      "pos": "n.f.",
+      "gloss": "front-page headline",
+      "glossEn": "front-page headline",
+      "fr": "La {manchette} promet plus que l'article.",
+      "zh": "The front-page headline promises more than the article.",
+      "en": "The front-page headline promises more than the article.",
+      "tip": "manchette 是头版大标题。"
+    },
+    {
+      "id": "ed-b2-07-04",
+      "lesson": "ed-b2-07",
+      "lemma": "enquête",
+      "pos": "n.f.",
+      "gloss": "investigation",
+      "glossEn": "investigation",
+      "fr": "La révélation de cette {enquête} a tout changé.",
+      "zh": "Revealing this investigation changed everything.",
+      "en": "Revealing this investigation changed everything.",
+      "tip": "名词化 révélation + de + 名词。"
+    },
+    {
+      "id": "ed-b2-07-05",
+      "lesson": "ed-b2-07",
+      "lemma": "révélation",
+      "pos": "n.f.",
+      "gloss": "revelation",
+      "glossEn": "revelation",
+      "fr": "Cette {révélation} arrive trop tard.",
+      "zh": "This revelation comes too late.",
+      "en": "This revelation comes too late.",
+      "tip": "révélation 是阴性。"
+    },
+    {
+      "id": "ed-b2-07-06",
+      "lesson": "ed-b2-07",
+      "lemma": "biais",
+      "pos": "n.m.",
+      "gloss": "bias",
+      "glossEn": "bias",
+      "fr": "Ce {biais} oriente la lecture.",
+      "zh": "This bias steers the reading.",
+      "en": "This bias steers the reading.",
+      "tip": "biais 的 s 不发音，阳性。"
+    },
+    {
+      "id": "ed-b2-08-01",
+      "lesson": "ed-b2-08",
+      "lemma": "prévention",
+      "pos": "n.f.",
+      "gloss": "prevention",
+      "glossEn": "prevention",
+      "fr": "La {prévention} coûte moins qu'une longue maladie.",
+      "zh": "Prevention costs less than a long illness.",
+      "en": "Prevention costs less than a long illness.",
+      "tip": "prévention 是阴性。"
+    },
+    {
+      "id": "ed-b2-08-02",
+      "lesson": "ed-b2-08",
+      "lemma": "traitement",
+      "pos": "n.m.",
+      "gloss": "treatment",
+      "glossEn": "treatment",
+      "fr": "Il faudrait commencer ce {traitement} plus tôt.",
+      "zh": "This treatment should start earlier.",
+      "en": "This treatment should start earlier.",
+      "tip": "faudrait 是建议。"
+    },
+    {
+      "id": "ed-b2-08-03",
+      "lesson": "ed-b2-08",
+      "lemma": "consultation",
+      "pos": "n.f.",
+      "gloss": "appointment",
+      "glossEn": "appointment",
+      "fr": "La {consultation} dure vingt minutes.",
+      "zh": "The appointment lasts twenty minutes.",
+      "en": "The appointment lasts twenty minutes.",
+      "tip": "consultation 在医疗里是一次问诊。"
+    },
+    {
+      "id": "ed-b2-08-04",
+      "lesson": "ed-b2-08",
+      "lemma": "immunité",
+      "pos": "n.f.",
+      "gloss": "immunity",
+      "glossEn": "immunity",
+      "fr": "L'{immunité} se reconstruit lentement.",
+      "zh": "Immunity rebuilds slowly.",
+      "en": "Immunity rebuilds slowly.",
+      "tip": "immunité 是阴性。"
+    },
+    {
+      "id": "ed-b2-08-05",
+      "lesson": "ed-b2-08",
+      "lemma": "douleur",
+      "pos": "n.f.",
+      "gloss": "pain",
+      "glossEn": "pain",
+      "fr": "Cette {douleur} empêche de marcher.",
+      "zh": "This pain makes walking impossible.",
+      "en": "This pain makes walking impossible.",
+      "tip": "douleur 是阴性。和已经学过的 mal 不是同一个词。"
+    },
+    {
+      "id": "ed-b2-08-06",
+      "lesson": "ed-b2-08",
+      "lemma": "convalescence",
+      "pos": "n.f.",
+      "gloss": "convalescence",
+      "glossEn": "convalescence",
+      "fr": "La {convalescence} prendra deux semaines.",
+      "zh": "Convalescence will take two weeks.",
+      "en": "Convalescence will take two weeks.",
+      "tip": "将来时 prendra。"
+    },
+    {
+      "id": "ed-b2-09-01",
+      "lesson": "ed-b2-09",
+      "lemma": "inégalité",
+      "pos": "n.f.",
+      "gloss": "inequality",
+      "glossEn": "inequality",
+      "fr": "Les {inégalités} sont creusées par le marché.",
+      "zh": "Inequalities are widened by the market.",
+      "en": "Inequalities are widened by the market.",
+      "tip": "主语复数阴性，creusées 加 es。par 引出施动者。"
+    },
+    {
+      "id": "ed-b2-09-02",
+      "lesson": "ed-b2-09",
+      "lemma": "précarité",
+      "pos": "n.f.",
+      "gloss": "precarity",
+      "glossEn": "precarity",
+      "fr": "La {précarité} est sous-estimée.",
+      "zh": "Precarity is underestimated.",
+      "en": "Precarity is underestimated.",
+      "tip": "被动态，没有必要说出是谁低估的。"
+    },
+    {
+      "id": "ed-b2-09-03",
+      "lesson": "ed-b2-09",
+      "lemma": "redistribution",
+      "pos": "n.f.",
+      "gloss": "redistribution",
+      "glossEn": "redistribution",
+      "fr": "La {redistribution} est votée chaque année.",
+      "zh": "Redistribution is voted on every year.",
+      "en": "Redistribution is voted on every year.",
+      "tip": "被动态 votée，因为 redistribution 是阴性。"
+    },
+    {
+      "id": "ed-b2-09-04",
+      "lesson": "ed-b2-09",
+      "lemma": "écart",
+      "pos": "n.m.",
+      "gloss": "gap",
+      "glossEn": "gap",
+      "fr": "L'{écart} entre les salaires grandit.",
+      "zh": "The gap between salaries is growing.",
+      "en": "The gap between salaries is growing.",
+      "tip": "écart 是阳性。"
+    },
+    {
+      "id": "ed-b2-09-05",
+      "lesson": "ed-b2-09",
+      "lemma": "minimum",
+      "pos": "n.m.",
+      "gloss": "minimum",
+      "glossEn": "minimum",
+      "fr": "Ce {minimum} social ne suffit plus.",
+      "zh": "This social minimum is no longer enough.",
+      "en": "This social minimum is no longer enough.",
+      "tip": "minimum 是阳性。"
+    },
+    {
+      "id": "ed-b2-09-06",
+      "lesson": "ed-b2-09",
+      "lemma": "philanthropie",
+      "pos": "n.f.",
+      "gloss": "philanthropy",
+      "glossEn": "philanthropy",
+      "fr": "La {philanthropie} ne remplace pas la loi.",
+      "zh": "Philanthropy does not replace the law.",
+      "en": "Philanthropy does not replace the law.",
+      "tip": "philanthropie 是阴性。"
+    },
+    {
+      "id": "ed-b2-10-01",
+      "lesson": "ed-b2-10",
+      "lemma": "registre",
+      "pos": "n.m.",
+      "gloss": "register",
+      "glossEn": "register",
+      "fr": "En variant le {registre}, on change l'effet.",
+      "zh": "By varying the register, you change the effect.",
+      "en": "By varying the register, you change the effect.",
+      "tip": "en + 现在分词 variant。"
+    },
+    {
+      "id": "ed-b2-10-02",
+      "lesson": "ed-b2-10",
+      "lemma": "argot",
+      "pos": "n.m.",
+      "gloss": "slang",
+      "glossEn": "slang",
+      "fr": "Cet {argot} ne s'écrit presque pas.",
+      "zh": "This slang is hardly ever written.",
+      "en": "This slang is hardly ever written.",
+      "tip": "argot 是阳性。"
+    },
+    {
+      "id": "ed-b2-10-03",
+      "lesson": "ed-b2-10",
+      "lemma": "nuance",
+      "pos": "n.f.",
+      "gloss": "nuance",
+      "glossEn": "nuance",
+      "fr": "Cette {nuance} sépare deux mots proches.",
+      "zh": "This nuance separates two close words.",
+      "en": "This nuance separates two close words.",
+      "tip": "nuance 是阴性。"
+    },
+    {
+      "id": "ed-b2-10-04",
+      "lesson": "ed-b2-10",
+      "lemma": "emprunt",
+      "pos": "n.m.",
+      "gloss": "borrowing",
+      "glossEn": "borrowing",
+      "fr": "Cet {emprunt} à l'anglais s'est installé.",
+      "zh": "This borrowing from English has settled in.",
+      "en": "This borrowing from English has settled in.",
+      "tip": "emprunt 是从另一种语言借来的词。"
+    },
+    {
+      "id": "ed-b2-10-05",
+      "lesson": "ed-b2-10",
+      "lemma": "orthographe",
+      "pos": "n.f.",
+      "gloss": "spelling",
+      "glossEn": "spelling",
+      "fr": "L'{orthographe} de ce mot hésite encore.",
+      "zh": "The spelling of this word is still unsettled.",
+      "en": "The spelling of this word is still unsettled.",
+      "tip": "orthographe 是阴性。"
+    },
+    {
+      "id": "ed-b2-10-06",
+      "lesson": "ed-b2-10",
+      "lemma": "variante",
+      "pos": "n.f.",
+      "gloss": "variant",
+      "glossEn": "variant",
+      "fr": "Cette {variante} régionale reste vivante.",
+      "zh": "This regional variant stays alive.",
+      "en": "This regional variant stays alive.",
+      "tip": "variante 是阴性。"
+    },
+    {
+      "id": "ed-b2-11-01",
+      "lesson": "ed-b2-11",
+      "lemma": "éthique",
+      "pos": "n.f.",
+      "gloss": "ethics",
+      "glossEn": "ethics",
+      "fr": "Il est essentiel que l'{éthique} reste visible.",
+      "zh": "It is essential that ethics stay visible.",
+      "en": "It is essential that ethics stay visible.",
+      "tip": "il est essentiel que + 虚拟式 reste。éthique 这里是阴性名词。"
+    },
+    {
+      "id": "ed-b2-11-02",
+      "lesson": "ed-b2-11",
+      "lemma": "dilemme",
+      "pos": "n.m.",
+      "gloss": "dilemma",
+      "glossEn": "dilemma",
+      "fr": "Ce {dilemme} n'a pas de bonne sortie.",
+      "zh": "This dilemma has no good way out.",
+      "en": "This dilemma has no good way out.",
+      "tip": "dilemme 是阳性。"
+    },
+    {
+      "id": "ed-b2-11-03",
+      "lesson": "ed-b2-11",
+      "lemma": "limite",
+      "pos": "n.f.",
+      "gloss": "limit",
+      "glossEn": "limit",
+      "fr": "La {limite} doit être dite avant l'essai.",
+      "zh": "The limit must be stated before the trial.",
+      "en": "The limit must be stated before the trial.",
+      "tip": "limite 是阴性。"
+    },
+    {
+      "id": "ed-b2-11-04",
+      "lesson": "ed-b2-11",
+      "lemma": "progrès",
+      "pos": "n.m.",
+      "gloss": "progress",
+      "glossEn": "progress",
+      "fr": "Le {progrès} ne justifie pas tout.",
+      "zh": "Progress does not justify everything.",
+      "en": "Progress does not justify everything.",
+      "tip": "progrès 的 s 不发音。"
+    },
+    {
+      "id": "ed-b2-11-05",
+      "lesson": "ed-b2-11",
+      "lemma": "intelligence",
+      "pos": "n.f.",
+      "gloss": "intelligence",
+      "glossEn": "intelligence",
+      "fr": "Jusqu'où cette {intelligence} ira-t-elle ?",
+      "zh": "How far will this intelligence go?",
+      "en": "How far will this intelligence go?",
+      "tip": "jusqu'où + 将来时 ira。"
+    },
+    {
+      "id": "ed-b2-11-06",
+      "lesson": "ed-b2-11",
+      "lemma": "controverse",
+      "pos": "n.f.",
+      "gloss": "controversy",
+      "glossEn": "controversy",
+      "fr": "La {controverse} dure depuis des mois.",
+      "zh": "The controversy has lasted for months.",
+      "en": "The controversy has lasted for months.",
+      "tip": "controverse 是阴性。depuis + 现在时。"
+    },
+    {
+      "id": "ed-b2-12-01",
+      "lesson": "ed-b2-12",
+      "lemma": "création",
+      "pos": "n.f.",
+      "gloss": "creation",
+      "glossEn": "creation",
+      "fr": "Cette {création} dont il parle est récente.",
+      "zh": "This creation he is talking about is recent.",
+      "en": "This creation he is talking about is recent.",
+      "tip": "parler de → dont。"
+    },
+    {
+      "id": "ed-b2-12-02",
+      "lesson": "ed-b2-12",
+      "lemma": "interprétation",
+      "pos": "n.f.",
+      "gloss": "interpretation",
+      "glossEn": "interpretation",
+      "fr": "Son {interprétation} change la pièce.",
+      "zh": "His interpretation changes the play.",
+      "en": "His interpretation changes the play.",
+      "tip": "interprétation 是阴性。"
+    },
+    {
+      "id": "ed-b2-12-03",
+      "lesson": "ed-b2-12",
+      "lemma": "public",
+      "pos": "n.m.",
+      "gloss": "audience",
+      "glossEn": "audience",
+      "fr": "Le {public} qui reste comprend mieux.",
+      "zh": "The audience that stays understands better.",
+      "en": "The audience that stays understands better.",
+      "tip": "qui 代替主语 public。public 是阳性单数，动词用单数。"
+    },
+    {
+      "id": "ed-b2-12-04",
+      "lesson": "ed-b2-12",
+      "lemma": "galerie",
+      "pos": "n.f.",
+      "gloss": "gallery",
+      "glossEn": "gallery",
+      "fr": "La {galerie} dont je te parle expose demain.",
+      "zh": "The gallery I'm telling you about exhibits tomorrow.",
+      "en": "The gallery I'm telling you about exhibits tomorrow.",
+      "tip": "dont 代替 de la galerie。"
+    },
+    {
+      "id": "ed-b2-12-05",
+      "lesson": "ed-b2-12",
+      "lemma": "performance",
+      "pos": "n.f.",
+      "gloss": "performance",
+      "glossEn": "performance",
+      "fr": "Cette {performance} dure quarante minutes.",
+      "zh": "This performance lasts forty minutes.",
+      "en": "This performance lasts forty minutes.",
+      "tip": "performance 在艺术里是一场行为演出。"
+    },
+    {
+      "id": "ed-b2-12-06",
+      "lesson": "ed-b2-12",
+      "lemma": "commissaire",
+      "pos": "n.",
+      "gloss": "curator",
+      "glossEn": "curator",
+      "fr": "Le {commissaire} choisit l'ordre des salles.",
+      "zh": "The curator chooses the order of the rooms.",
+      "en": "The curator chooses the order of the rooms.",
+      "tip": "commissaire d'exposition。女性也常说 la commissaire。"
     }
   ]
 };
