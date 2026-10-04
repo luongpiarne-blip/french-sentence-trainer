@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<title>法语句子背词</title>
+<style>
+  :root {
+    --paper: #f3efe6;
+    --paper-2: #e9e2d4;
+    --ink: #1c1915;
+    --muted: #6d655c;
+    --line: #ddd4c6;
+    --accent: #1e4668;
+    --accent-soft: #e4edf4;
+    --good: #1d6b45;
+    --good-soft: #e5f2eb;
+    --bad: #8d2e2e;
+    --bad-soft: #f8e8e6;
+    --mark: #8d6a32;
+    --sans: "Avenir Next", "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", sans-serif;
+    --serif: "Iowan Old Style", Palatino, "Palatino Linotype", "Songti SC", "Noto Serif SC", serif;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.5;
+    min-height: 100vh;
+    min-height: 100dvh;
+    -webkit-text-size-adjust: 100%;
+  }
+  button, input { font-family: inherit; color: inherit; }
+  button { cursor: pointer; touch-action: manipulation; }
+  #app {
+    max-width: 820px; margin: 0 auto;
+    padding: calc(28px + env(safe-area-inset-top)) 20px calc(64px + env(safe-area-inset-bottom));
+  }
+  .top {
+    display: flex; justify-content: space-between; align-items: baseline;
+    gap: 16px; margin-bottom: 22px;
+  }
+  .brand { font-family: var(--serif); font-size: 22px; letter-spacing: 0.01em; }
+  .brand span { color: var(--muted); font-family: var(--sans); font-size: 13px; margin-left: 8px; }
+  .nav { display: flex; gap: 6px; flex-wrap: wrap; justify-content: flex-end; }
+  .nav button, .ghost, .btn {
+    border: 1px solid var(--line); background: transparent; border-radius: 999px;
+    padding: 6px 12px; font-size: 13px;
+  }
+  .nav button.on { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+  h1 { font-family: var(--serif); font-weight: 500; font-size: 34px; line-height: 1.2; margin: 0 0 8px; }
+  h2 { font-family: var(--serif); font-weight: 500; font-size: 22px; margin: 0 0 8px; }
+  .lead { color: var(--muted); max-width: 38em; margin: 0 0 18px; }
+  .row { display: flex; gap: 18px; flex-wrap: wrap; align-items: flex-end; }
+  .stat { min-width: 88px; }
+  .stat b { display: block; font-family: var(--serif); font-size: 28px; font-weight: 500; line-height: 1; }
+  .stat i { font-style: normal; color: var(--muted); font-size: 12px; }
+  .push {
+    margin: 18px 0; padding: 14px 16px; border-left: 3px solid var(--accent); background: var(--accent-soft);
+  }
+  .push.warn { border-color: var(--bad); background: var(--bad-soft); }
+  .push.ok { border-color: var(--good); background: var(--good-soft); }
+  .btn.primary {
+    background: var(--accent); color: #f7f4ee; border-color: var(--accent);
+    border-radius: 8px; padding: 12px 18px; font-size: 16px;
+  }
+  .btn.primary:disabled { opacity: 0.45; cursor: default; }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 18px 28px; margin-top: 22px; }
+  .modes { display: flex; gap: 6px; margin: 0 0 10px; }
+  .modes button {
+    border: 1px solid var(--line); background: transparent; border-radius: 999px;
+    padding: 8px 14px; font-size: 14px; min-height: 40px;
+  }
+  .modes button.on { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+  @media (max-width: 700px) {
+    .grid2 { grid-template-columns: 1fr; }
+    h1 { font-size: 28px; }
+    .brand span { display: none; }
+    .fr { font-size: 26px; }
+    #app { padding: calc(16px + env(safe-area-inset-top)) 14px calc(28px + env(safe-area-inset-bottom)); }
+    .keys .row { display: grid; gap: 4px; }
+    .keys .row.ten { grid-template-columns: repeat(10, minmax(0, 1fr)); }
+    .keys .row.six { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+    .keys .row.accents { grid-template-columns: repeat(8, minmax(0, 1fr)); }
+    .keys .row.tools { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .keys button { min-width: 0; width: 100%; height: 44px; padding: 0; }
+    .actions .btn { min-height: 44px; flex: 1; }
+    .nav button { min-height: 36px; }
+  }
+  .unit { margin-bottom: 10px; }
+  .unit .meta { display: flex; justify-content: space-between; align-items: baseline; font-size: 13px; gap: 12px; }
+  .unit .meta b { font-weight: 600; }
+  .unit .meta span { color: var(--muted); white-space: nowrap; }
+  .bar { height: 4px; background: var(--paper-2); margin-top: 4px; }
+  .bar i { display: block; height: 100%; background: var(--accent); }
+  .zh {
+    font-size: 18px; color: var(--muted); margin: 8px 0 18px;
+  }
+  .fr {
+    font-family: var(--serif); font-size: 32px; line-height: 1.45; margin: 0 0 18px;
+  }
+  .blank {
+    display: inline-block; border-bottom: 2px solid var(--mark); min-width: 4.2em;
+    transform: translateY(-2px); margin: 0 0.12em;
+  }
+  .fill { border-bottom: 2px solid transparent; padding: 0 0.08em; }
+  .fill.ok { color: var(--good); }
+  .fill.bad { color: var(--bad); }
+  .chip {
+    display: inline-block; font-size: 12px; letter-spacing: 0.02em;
+    color: var(--accent); background: var(--accent-soft); border-radius: 999px; padding: 3px 8px;
+  }
+  .answer-row { display: flex; gap: 8px; align-items: center; margin: 8px 0 10px; }
+  #typed {
+    flex: 1; font-family: var(--serif); font-size: 22px; padding: 10px 12px;
+    border: none; border-bottom: 2px solid var(--ink); background: transparent; border-radius: 0;
+    outline: none;
+  }
+  .keys { display: flex; flex-direction: column; gap: 6px; margin: 4px 0 12px; }
+  .keys .row { display: flex; flex-wrap: wrap; gap: 4px; }
+  .keys button {
+    border: 1px solid var(--line); background: #fffdf8; min-width: 36px; height: 44px;
+    padding: 0 8px; font-family: var(--serif); font-size: 18px; border-radius: 6px;
+  }
+  .keys button.wide { min-width: 72px; font-family: var(--sans); font-size: 14px; }
+  .actions { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 8px; }
+  .feedback { margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--line); }
+  .lemma { font-family: var(--serif); font-size: 18px; }
+  .tip { color: var(--muted); margin: 6px 0 0; }
+  .miss { color: var(--bad); font-size: 14px; }
+  ul.clean { margin: 8px 0 0; padding-left: 18px; }
+  ul.clean li { margin: 4px 0; }
+  .ex { font-family: var(--serif); font-size: 20px; margin: 10px 0 0; }
+  .ex i { font-family: var(--sans); font-style: normal; color: var(--muted); font-size: 14px; display: block; }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  th, td { text-align: left; padding: 7px 6px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { color: var(--muted); font-weight: 500; font-size: 12px; }
+  .word { font-family: var(--serif); font-size: 17px; }
+  .filters { display: flex; gap: 8px; flex-wrap: wrap; margin: 8px 0 14px; }
+  .filters input, .filters select, .field input, .field select {
+    border: 1px solid var(--line); background: #fffdf8; padding: 8px 10px; border-radius: 6px; font-size: 14px;
+  }
+  .daygrid { display: grid; grid-template-columns: repeat(10, 1fr); gap: 6px; margin-top: 10px; }
+  .day {
+    aspect-ratio: 1; border: 1px solid var(--line); display: flex; align-items: center; justify-content: center;
+    font-size: 12px; background: #fffdf8;
+  }
+  .day.done { background: var(--accent); color: #f7f4ee; border-color: var(--accent); }
+  .day.today { outline: 2px solid var(--mark); outline-offset: 1px; }
+  .day.miss { background: var(--bad-soft); }
+  .small { color: var(--muted); font-size: 13px; }
+  .session-top { display: flex; justify-content: space-between; gap: 12px; align-items: center; margin-bottom: 22px; }
+  .track { height: 3px; background: var(--paper-2); margin: 8px 0 18px; }
+  .track i { display: block; height: 100%; background: var(--accent); }
+  .hidden { display: none !important; }
+  .list-sent { font-family: var(--serif); font-size: 18px; margin: 0 0 4px; }
+  .k { color: var(--good); }
+</style>
+</head>
+<body>
+<div id="app"></div>
+<script src="deck.js"></script>
+<script>
+const INTRO_DAYS = 45;
+const COURSE_DAYS = 60;
+const REVIEW_CAP = 70;
+const SESSION_CAP = 90;
+const KEY = "fr-sentence-v1";
+
+const $ = (sel, root = document) => root.querySelector(sel);
+const lessons = () => DECK.lessons;
+const lessonById = Object.fromEntries(DECK.lessons.map(l => [l.id, l]));
+const cards = () => DECK.cards;
+
+function pad(n) { return String(n).padStart(2, "0"); }
+function dateKey(d = new Date()) {
+  return d.getFullYear() + "-" + pad(d.getMonth() + 1) + "-" + pad(d.getDate());
+}
+function parseKey(s) {
+  const [y, m, d] = s.split("-").map(Number);
+  return new Date(y, m - 1, d);
+}
+function addDays(key, n) {
+  const d = parseKey(key);
+  d.setDate(d.getDate() + n);
+  return dateKey(d);
+}
+function daysBetween(a, b) {
+  const ms = parseKey(b) - parseKey(a);
+  return Math.round(ms / 86400000);
+}
+function fmt(key) {
+  const d = parseKey(key);
+  return (d.getMonth() + 1) + " 月 " + d.getDate() + " 日";
+}
+function escapeHtml(s) {
+  return String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+}
+function answerOf(card) {
+  const m = card.fr.match(/\{([^}]+)\}/);
+  return m ? m[1] : "";
+}
+function normalize(s) {
+  return String(s)
+    .normalize("NFC")
+    .toLowerCase()
+    .replace(/[’ʼ´`]/g, "'")
+    .replace(/œ/g, "oe")
+    .replace(/æ/g, "ae")
+    .replace(/\s+/g, " ")
+    .replace(/\s*-\s*/g, "-")
+    .trim()
+    .replace(/[.。!！?？]+$/g, "");
+}
+function stripAccents(s) {
+  return s.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+}
+
+function blankState() {
+  return {
+    v: 1,
+    started: dateKey(),
+    speak: true,
+    hour: 20,
+    seenGrammar: {},
+    days: {},
+    cards: {},
+    inputMode: ""
+  };
+}
+function load() {
+  try {
+    const raw = localStorage.getItem(KEY);
+    if (!raw) return blankState();
+    const p = JSON.parse(raw);
+    if (!p || p.v !== 1) return blankState();
+    p.seenGrammar = p.seenGrammar || {};
+    p.days = p.days || {};
+    p.cards = p.cards || {};
+    if (p.inputMode !== "letters" && p.inputMode !== "system") p.inputMode = "";
+    return p;
+  } catch (e) {
+    return blankState();
+  }
+}
+function save(p) { localStorage.setItem(KEY, JSON.stringify(p)); }
+
+function cardState(p, id) {
+  if (!p.cards[id]) {
+    p.cards[id] = { ease: 2.5, iv: 0, due: "", reps: 0, lapses: 0, st: "new", intro: "" };
+  }
+  return p.cards[id];
+}
+
+function plan(p, today = dateKey()) {
+  const total = cards().length;
+  const dayNum = Math.max(1, daysBetween(p.started, today) + 1);
+  let introduced = 0;
+  let introducedToday = 0;
+  let steady = 0;
+  let known = 0;
+  let dueCount = 0;
+  for (const c of cards()) {
+    const s = p.cards[c.id];
+    if (!s || !s.intro) continue;
+    introduced++;
+    if (s.intro === today) introducedToday++;
+    if (s.reps >= 3 && s.iv >= 7) steady++;
+    if (s.reps >= 4 && s.iv >= 21) known++;
+    if (s.due && s.due <= today && s.intro !== today) dueCount++;
+  }
+  const remainingNew = total - introduced;
+  const base = Math.ceil(total / INTRO_DAYS);
+  const expectedBefore = dayNum <= 1 ? 0 : Math.min(total, Math.ceil(total * Math.min(dayNum - 1, INTRO_DAYS) / INTRO_DAYS));
+  const behind = Math.max(0, expectedBefore - (introduced - introducedToday));
+  let newTarget;
+  if (remainingNew === 0) newTarget = 0;
+  else if (dayNum <= INTRO_DAYS) newTarget = Math.min(remainingNew, base + Math.min(behind, base), 24);
+  else newTarget = Math.min(remainingNew, 24);
+  const stillNew = Math.max(0, newTarget - introducedToday);
+  const deadline = addDays(p.started, COURSE_DAYS - 1);
+  const daysLeft = daysBetween(today, deadline);
+  return {
+    total, dayNum, introduced, introducedToday, remainingNew, steady, known,
+    dueCount, base, behind, newTarget, stillNew, deadline, daysLeft, today
+  };
+}
+
+function nextNewCards(p, n) {
+  if (n <= 0) return [];
+  const out = [];
+  for (const c of cards()) {
+    const s = p.cards[c.id];
+    if (s && s.intro) continue;
+    out.push(c);
+    if (out.length >= n) break;
+  }
+  return out;
+}
+function dueCards(p, today) {
+  const out = [];
+  for (const c of cards()) {
+    const s = p.cards[c.id];
+    if (!s || !s.intro || s.intro === today) continue;
+    if (s.due && s.due <= today) out.push(c);
+  }
+  out.sort((a, b) => {
+    const sa = p.cards[a.id], sb = p.cards[b.id];
+    if (sa.due !== sb.due) return sa.due < sb.due ? -1 : 1;
+    return (sb.lapses || 0) - (sa.lapses || 0);
+  });
+  return out;
+}
+function buildQueue(p, info, extra) {
+  const reviews = dueCards(p, info.today);
+  const news = nextNewCards(p, extra ? 0 : info.stillNew);
+  const reviewTake = Math.min(reviews.length, extra ? 30 : REVIEW_CAP, Math.max(0, SESSION_CAP - news.length));
+  const picked = reviews.slice(0, reviewTake);
+  const queue = [];
+  let ri = 0, ni = 0;
+  while (ri < picked.length || ni < news.length) {
+    if (ri < picked.length) queue.push(picked[ri++].id);
+    if (ri < picked.length) queue.push(picked[ri++].id);
+    if (ni < news.length) queue.push(news[ni++].id);
+  }
+  return { queue, reviewLeft: Math.max(0, reviews.length - picked.length), reviewN: picked.length, newN: news.length };
+}
+
+let S = load();
+let view = "home";
+let session = null;
+
+function grade(st, result) {
+  if (!st.ease) st.ease = 2.5;
+  if (result === "fail") {
+    st.lapses = (st.lapses || 0) + 1;
+    st.reps = 0;
+    st.ease = Math.max(1.3, st.ease - 0.2);
+    st.iv = 0;
+    st.st = "learn";
+    st.due = dateKey();
+    return;
+  }
+  st.reps = (st.reps || 0) + 1;
+  if (result === "hard") st.ease = Math.max(1.3, st.ease - 0.15);
+  if (result === "easy") st.ease = Math.min(3.2, st.ease + 0.15);
+  let iv;
+  if (st.reps === 1) iv = 1;
+  else if (st.reps === 2) iv = result === "hard" ? 2 : 3;
+  else iv = Math.round((st.iv || 3) * (result === "hard" ? 1.2 : st.ease));
+  st.iv = Math.max(1, Math.min(45, iv));
+  st.st = "rev";
+  st.due = addDays(dateKey(), st.iv);
+}
+
+function speak(text) {
+  if (!S.speak || !window.speechSynthesis) return;
+  const u = new SpeechSynthesisUtterance(text.replace(/[{}]/g, ""));
+  u.lang = "fr-FR";
+  u.rate = 0.92;
+  window.speechSynthesis.cancel();
+  window.speechSynthesis.speak(u);
+}
+
+function render() {
+  const app = $("#app");
+  if (view === "home") app.innerHTML = renderHome();
+  else if (view === "study") app.innerHTML = renderStudy();
+  else if (view === "done") app.innerHTML = renderDone();
+  else if (view === "list") app.innerHTML = renderList();
+  else if (view === "grammar") app.innerHTML = renderGrammar();
+  else if (view === "plan") app.innerHTML = renderPlan();
+  bind();
+}
+
+function shell(body) {
+  return `
+    <div class="top">
+      <div class="brand">法语句子背词<span>${escapeHtml(DECK.books)}</span></div>
+      <div class="nav">
+        <button data-go="home" class="${view === "home" || view === "study" || view === "done" ? "on" : ""}">今天</button>
+        <button data-go="plan" class="${view === "plan" ? "on" : ""}">60 天</button>
+        <button data-go="grammar" class="${view === "grammar" ? "on" : ""}">语法</button>
+        <button data-go="list" class="${view === "list" ? "on" : ""}">词表</button>
+      </div>
+    </div>
+    ${body}`;
+}
+
+function renderHome() {
+  const info = plan(S);
+  const built = buildQueue(S, info, false);
+  const late = info.daysLeft < 0;
+  const debt = built.reviewLeft;
+  let pushClass = "push";
+  let push;
+  if (info.introduced === 0 && info.dayNum === 1) {
+    push = `从今天开始，到 ${fmt(info.deadline)}。前 45 天每天大约 ${info.base} 个新词，后 15 天只复习。今天 ${built.newN} 个新句子${built.reviewN ? "，" + built.reviewN + " 个复习" : ""}。`;
+  } else if (info.remainingNew === 0 && info.dueCount === 0) {
+    pushClass = "push ok";
+    push = "今天没有到期的句子。可以去词表里抽查，或者休息。";
+  } else if (info.behind > 0) {
+    pushClass = "push warn";
+    push = `新词落后 ${info.behind} 个。今天把新词提到 ${info.newTarget} 个，做完这组就追回一部分。截止日仍是 ${fmt(info.deadline)}。`;
+  } else if (late && info.remainingNew > 0) {
+    pushClass = "push warn";
+    push = `原定 ${fmt(info.deadline)} 学完，这一天已经过了。还剩 ${info.remainingNew} 个新词，今天先学 ${built.newN} 个。`;
+  } else if (info.dayNum > INTRO_DAYS && info.remainingNew === 0) {
+    pushClass = "push ok";
+    push = `新词已经全部见过。从现在到 ${fmt(info.deadline)} 只复习，把句子稳住。今天 ${built.reviewN} 个到期。`;
+  } else {
+    push = `第 ${info.dayNum} 天 / ${COURSE_DAYS}。今天 ${built.newN} 个新句子，${built.reviewN} 个复习。截止 ${fmt(info.deadline)}。`;
+  }
+  if (debt > 0) push += ` 复习还积压 ${debt} 张，做完这组之后可以再来一组。`;
+
+  const units = [];
+  for (const book of ["A1", "A2"]) {
+    const rows = [];
+    const ls = lessons().filter(l => l.book === book);
+    const unitIds = [...new Set(ls.map(l => l.unit))];
+    for (const u of unitIds) {
+      const ids = new Set(ls.filter(l => l.unit === u).map(l => l.id));
+      const sample = ls.find(l => l.unit === u);
+      const mine = cards().filter(c => ids.has(c.lesson));
+      const got = mine.filter(c => (S.cards[c.id]?.reps || 0) >= 3).length;
+      const pct = mine.length ? Math.round(got / mine.length * 100) : 0;
+      rows.push(`<div class="unit"><div class="meta"><b>${escapeHtml(sample.unitFr)}</b><span>${escapeHtml(sample.unitZh)} · 稳住 ${got}/${mine.length}</span></div><div class="bar"><i style="width:${pct}%"></i></div></div>`);
+    }
+    units.push(`<div><h2>${book}</h2>${rows.join("")}</div>`);
+  }
+
+  const canStart = built.queue.length > 0;
+  return shell(`
+    <h1>第 ${info.dayNum} 天</h1>
+    <p class="lead">看英文，把法语句子里缺的那个词打出来。词不单独出现。</p>
+    <div class="row">
+      <div class="stat"><b>${info.introduced}</b><i>见过 / ${info.total}</i></div>
+      <div class="stat"><b>${info.steady}</b><i>稳住</i></div>
+      <div class="stat"><b>${info.known}</b><i>掌握</i></div>
+      <div class="stat"><b>${streak()}</b><i>连续打卡</i></div>
+    </div>
+    <div class="${pushClass}">${escapeHtml(push)}</div>
+    <div class="actions">
+      <button class="btn primary" id="start" ${canStart ? "" : "disabled"}>${canStart ? `开始今天的 ${built.queue.length} 个句子` : "今天的量做完了"}</button>
+      ${debt > 0 && !canStart ? "" : ""}
+      <button class="btn" id="extra" ${info.dueCount > 0 && info.stillNew === 0 ? "" : "disabled"}>再复习一组</button>
+    </div>
+    <p class="small">句子按《你好！法语》1–2 册各课的词和语法新写，不是课文原句。A1 的动词变位和阴阳性，对照了《欧标法语初级 A1 知识点》。</p>
+    <div class="grid2">${units.join("")}</div>
+  `);
+}
+
+function inputMode() {
+  if (S.inputMode === "letters" || S.inputMode === "system") return S.inputMode;
+  const coarse = window.matchMedia && window.matchMedia("(pointer: coarse)").matches;
+  return coarse ? "letters" : "system";
+}
+
+function setInputMode(mode) {
+  S.inputMode = mode;
+  save(S);
+  const typed = $("#typed");
+  const value = typed ? typed.value : "";
+  const start = typed ? typed.selectionStart : value.length;
+  if (mode === "letters" && typed) typed.blur();
+  render();
+  const again = $("#typed");
+  if (!again) return;
+  again.value = value;
+  if (mode === "system") {
+    again.focus();
+    const pos = start == null ? again.value.length : start;
+    again.setSelectionRange(pos, pos);
+  }
+}
+
+function streak() {
+  const today = dateKey();
+  let n = 0;
+  let cursor = S.days[today]?.done ? today : addDays(today, -1);
+  if (!S.days[cursor]?.done && cursor !== today) return 0;
+  while (S.days[cursor]?.done) {
+    n++;
+    cursor = addDays(cursor, -1);
+  }
+  return n;
+}
+
+function renderStudy() {
+  if (!session) return shell(`<p>没有进行中的练习。</p>`);
+  const total = session.queue.length;
+  const idx = session.index;
+  if (idx >= total) {
+    view = "done";
+    return renderDone();
+  }
+  const id = session.queue[idx];
+  const card = cards().find(c => c.id === id);
+  const lesson = lessonById[card.lesson];
+  if (session.phase === "grammar") return shell(renderGrammarGate(lesson));
+  const ans = answerOf(card);
+  const shown = session.revealed ? card.fr : card.fr;
+  const frHtml = sentenceHtml(shown, ans, session.revealed ? (session.lastOk ? "ok" : "bad") : "pending");
+  const width = Math.max(3, ans.length);
+  const progress = Math.round(idx / total * 100);
+  let feedback = "";
+  if (session.revealed) {
+    const heard = session.lastInput || "";
+    feedback = `<div class="feedback">
+      <div class="lemma">${escapeHtml(card.lemma)} · ${escapeHtml(card.pos)} · ${escapeHtml(card.glossEn)}</div>
+      ${ans.toLowerCase() !== card.lemma.toLowerCase() ? `<div class="small">句子里用的是 ${escapeHtml(ans)}</div>` : ""}
+      <p class="tip">${escapeHtml(card.tip)}</p>
+      ${session.lastOk ? "" : `<p class="miss">你写的是：${escapeHtml(heard || "（空）")}</p>`}
+      <div class="actions"><button class="btn" id="hear">再听一遍</button><button class="btn primary" id="next">继续</button></div>
+    </div>`;
+  }
+  const hintLine = session.hint === 1 ? `首字母：${escapeHtml(ans.slice(0, 1))}`
+    : session.hint >= 2 ? `${escapeHtml(card.pos)} · ${escapeHtml(card.glossEn)}`
+    : "";
+  return shell(`
+    <div class="session-top">
+      <span class="chip">${escapeHtml(lesson.book)} · 第 ${lesson.n} 课 · ${escapeHtml(lesson.title)}</span>
+      <span class="small">${idx + 1} / ${total}</span>
+    </div>
+    <div class="track"><i style="width:${progress}%"></i></div>
+    <div class="zh">${escapeHtml(card.en)}</div>
+    <div class="fr">${frHtml.replace('class="blank"', `class="blank" style="min-width:${width}ch"`)}</div>
+    ${session.revealed ? "" : `
+      <div class="modes" role="group" aria-label="输入方式">
+        <button type="button" id="mode-system" class="${inputMode() === "system" ? "on" : ""}">键盘</button>
+        <button type="button" id="mode-letters" class="${inputMode() === "letters" ? "on" : ""}">字母键</button>
+      </div>
+      <div class="answer-row">
+        <input id="typed" lang="fr" enterkeyhint="done" inputmode="${inputMode() === "letters" ? "none" : "text"}" ${inputMode() === "letters" ? "readonly" : ""} autocomplete="off" autocapitalize="none" autocorrect="off" spellcheck="false" placeholder="${inputMode() === "letters" ? "点下面的字母" : "用键盘输入"}" aria-label="填入所缺的词">
+      </div>
+      <div class="keys ${inputMode() === "letters" ? "" : "hidden"}" id="keys"></div>
+      <p class="small">${inputMode() === "letters" ? "点字母拼词。大小写不用管。" : "用 iPhone 键盘输入。法语音符可以长按对应字母。"}</p>
+      <div class="small" id="hintline">${hintLine}</div>
+      <div class="actions">
+        <button class="btn" id="hint">提示</button>
+        <button class="btn" id="fail">不会</button>
+        <button class="btn primary" id="submit">提交</button>
+      </div>`}
+    ${feedback}
+  `);
+}
+
+function sentenceHtml(fr, ans, mode) {
+  const bits = fr.split(/\{[^}]+\}/);
+  const before = escapeHtml(bits[0] || "");
+  const after = escapeHtml(bits[1] || "");
+  if (mode === "pending") return before + `<span class="blank"></span>` + after;
+  const cls = mode === "ok" ? "ok" : "bad";
+  return before + `<span class="fill ${cls}">${escapeHtml(ans)}</span>` + after;
+}
+
+function renderGrammarGate(lesson) {
+  const points = lesson.grammar.map(g => `<li>${escapeHtml(g)}</li>`).join("");
+  const ex = lesson.examples.map(e => `<div class="ex">${escapeHtml(e.fr)}<i>${escapeHtml(e.en)}</i></div>`).join("");
+  return `
+    <div class="chip">${escapeHtml(lesson.book)} · 第 ${lesson.n} 课</div>
+    <h1>${escapeHtml(lesson.grammarTitle)}</h1>
+    <p class="lead">${escapeHtml(lesson.title)} · ${escapeHtml(lesson.titleZh)}</p>
+    <ul class="clean">${points}</ul>
+    ${ex}
+    <div class="actions" style="margin-top:18px"><button class="btn primary" id="gram-go">去句子里练</button></div>
+  `;
+}
+
+function renderDone() {
+  const info = plan(S);
+  const rows = (session?.log || []).map(item => {
+    const c = cards().find(x => x.id === item.id);
+    return `<div style="margin-bottom:12px">
+      <div class="list-sent">${sentenceHtml(c.fr, answerOf(c), item.ok ? "ok" : "bad")}</div>
+      <div class="small">${escapeHtml(c.en)}</div>
+    </div>`;
+  }).join("");
+  const ok = (session?.log || []).filter(x => x.ok).length;
+  const all = (session?.log || []).length;
+  return shell(`
+    <h1>这组做完了</h1>
+    <p class="lead">${all} 句里认对 ${ok} 句。见过 ${info.introduced} / ${info.total}，稳住 ${info.steady}。</p>
+    <div class="${info.behind > 0 || info.dueCount > 0 ? "push warn" : "push ok"}">${
+      info.dueCount > 0
+        ? `还有 ${info.dueCount} 个到期的句子。今天可以再来一组。`
+        : info.remainingNew > 0
+          ? `新词还剩 ${info.remainingNew} 个。明天大约 ${Math.min(24, Math.max(info.base, info.remainingNew))} 个新句子。`
+          : `到期的复习清完了。明天继续，截止 ${fmt(info.deadline)}。`
+    }</div>
+    <div class="actions">
+      <button class="btn primary" id="home">回今天</button>
+      <button class="btn" id="extra2" ${info.dueCount > 0 ? "" : "disabled"}>再复习一组</button>
+    </div>
+    <h2 style="margin-top:28px">刚才这些句子</h2>
+    ${rows || `<p class="small">这组没有句子。</p>`}
+  `);
+}
+
+function renderList() {
+  const q = (session && session.filter) || "";
+  const book = (session && session.bookFilter) || "all";
+  const lesson = (session && session.lessonFilter) || "all";
+  const opts = lessons().filter(l => book === "all" || l.book === book)
+    .map(l => `<option value="${l.id}" ${lesson === l.id ? "selected" : ""}>${l.book} ${l.n}. ${escapeHtml(l.title)}</option>`)
+    .join("");
+  const rows = cards().filter(c => {
+    const l = lessonById[c.lesson];
+    if (book !== "all" && l.book !== book) return false;
+    if (lesson !== "all" && c.lesson !== lesson) return false;
+    if (!q) return true;
+    const blob = (c.lemma + " " + c.glossEn + " " + c.fr + " " + c.en).toLowerCase();
+    return blob.includes(q.toLowerCase());
+  }).slice(0, 400).map(c => {
+    const s = S.cards[c.id];
+    const st = !s || !s.intro ? "未学" : s.reps >= 4 && s.iv >= 21 ? "掌握" : s.reps >= 3 && s.iv >= 7 ? "稳住" : "在学";
+    const l = lessonById[c.lesson];
+    return `<tr>
+      <td class="word">${escapeHtml(c.lemma)}<div class="small">${escapeHtml(c.pos)} · ${escapeHtml(c.glossEn)}</div></td>
+      <td>${sentenceHtml(c.fr, answerOf(c), "ok")}<div class="small">${escapeHtml(c.en)}</div></td>
+      <td class="small">${escapeHtml(l.book)} ${l.n}<br>${st}</td>
+    </tr>`;
+  }).join("");
+  return shell(`
+    <h1>词表</h1>
+    <p class="lead">按课排列，句子里标出要会的那个词。这里只供查阅，不算打卡。</p>
+    <div class="filters">
+      <select id="bookf">
+        <option value="all" ${book === "all" ? "selected" : ""}>A1 + A2</option>
+        <option value="A1" ${book === "A1" ? "selected" : ""}>A1</option>
+        <option value="A2" ${book === "A2" ? "selected" : ""}>A2</option>
+      </select>
+      <select id="lessonf"><option value="all">全部课</option>${opts}</select>
+      <input id="q" placeholder="搜法语或英文" value="${escapeHtml(q)}">
+    </div>
+    <table>
+      <thead><tr><th>词</th><th>句子</th><th>进度</th></tr></thead>
+      <tbody>${rows}</tbody>
+    </table>
+    <p class="small">一次最多显示 400 条。用课次或搜索收窄。</p>
+  `);
+}
+
+function renderGrammar() {
+  const blocks = lessons().map(l => `
+    <div style="margin-bottom:18px">
+      <div class="chip">${escapeHtml(l.book)} · 第 ${l.n} 课 · ${escapeHtml(l.titleZh)}</div>
+      <h2 style="margin-top:8px">${escapeHtml(l.grammarTitle)}</h2>
+      <ul class="clean">${l.grammar.map(g => `<li>${escapeHtml(g)}</li>`).join("")}</ul>
+      ${l.examples.map(e => `<div class="ex">${escapeHtml(e.fr)}<i>${escapeHtml(e.en)}</i></div>`).join("")}
+    </div>
+  `).join("");
+  return shell(`<h1>语法按课走</h1><p class="lead">每课先看这一屏，再到句子里填空。顺序跟教材的学习内容提要一致。</p>${blocks}`);
+}
+
+function renderPlan() {
+  const info = plan(S);
+  const cells = [];
+  for (let i = 0; i < COURSE_DAYS; i++) {
+    const key = addDays(S.started, i);
+    const done = S.days[key]?.done;
+    const isToday = key === dateKey();
+    const past = key < dateKey();
+    const cls = ["day", done ? "done" : "", isToday ? "today" : "", past && !done ? "miss" : ""].filter(Boolean).join(" ");
+    const d = parseKey(key);
+    cells.push(`<div class="${cls}" title="${key}">${d.getDate()}</div>`);
+  }
+  const dayLog = S.days[dateKey()];
+  return shell(`
+    <h1>60 天</h1>
+    <p class="lead">${fmt(S.started)} 开始，${fmt(info.deadline)} 结束。前 45 天引入新词，后 15 天巩固。深色是打卡完成的日子，红底是过去了但没做完的日子。</p>
+    <div class="daygrid">${cells.join("")}</div>
+    <div class="row" style="margin-top:22px">
+      <div class="stat"><b>${info.dayNum}</b><i>今天是第几天</i></div>
+      <div class="stat"><b>${info.daysLeft < 0 ? 0 : info.daysLeft}</b><i>距离截止还剩几天</i></div>
+      <div class="stat"><b>${info.base}</b><i>每天基础新词</i></div>
+    </div>
+    <h2 style="margin-top:28px">怎么算学会</h2>
+    <ul class="clean">
+      <li>见过：这个词在句子里出现过一次。</li>
+      <li>稳住：认对至少 3 次，并且间隔已经到 7 天。这是 60 天里要推到的状态。</li>
+      <li>掌握：间隔到了 21 天。第 45 天之后才遇到的词，两个月内来不及走到这一档，这是正常的。</li>
+    </ul>
+    <p class="small">答对后，间隔大约是 1 天、3 天，然后按记忆情况拉长，最长 45 天。答错会在这组里很快再出现，并回到明天。</p>
+    <h2 style="margin-top:28px">提醒和备份</h2>
+    <div class="field" style="display:flex;gap:8px;flex-wrap:wrap;align-items:center">
+      <label class="small">每天提醒（写入日历）<input id="hour" type="number" min="6" max="22" value="${S.hour}" style="width:64px;margin-left:6px"></label>
+      <button class="btn" id="ics">下载 60 天日历</button>
+      <button class="btn" id="export">导出进度</button>
+      <label class="btn">导入进度<input id="import" type="file" accept="application/json" class="hidden"></label>
+      <button class="btn" id="reset">清空重来</button>
+    </div>
+    <p class="small" style="margin-top:8px">今天已记：新词 ${dayLog?.new || 0}，复习 ${dayLog?.review || 0}。朗读${S.speak ? "开着" : "关着"}。<button class="ghost" id="speak" style="margin-left:6px">${S.speak ? "关闭朗读" : "打开朗读"}</button></p>
+    <p class="small">进度存在这台浏览器里。换电脑之前先导出。</p>
+  `);
+}
+
+function bind() {
+  document.querySelectorAll("[data-go]").forEach(b => b.onclick = () => {
+    view = b.dataset.go;
+    if (view === "list") session = session && session.queue ? session : { filter: "", bookFilter: "all", lessonFilter: "all" };
+    render();
+  });
+  const start = $("#start");
+  if (start) start.onclick = () => beginSession(false);
+  const extra = $("#extra");
+  if (extra && !extra.disabled) extra.onclick = () => beginSession(true);
+  const extra2 = $("#extra2");
+  if (extra2 && !extra2.disabled) extra2.onclick = () => beginSession(true);
+  const home = $("#home");
+  if (home) home.onclick = () => { view = "home"; render(); };
+
+  const typed = $("#typed");
+  if (typed) {
+    if (inputMode() === "system") typed.focus();
+    typed.onkeydown = (e) => { if (e.key === "Enter") { e.preventDefault(); submitAnswer(); } };
+  }
+  const modeSystem = $("#mode-system");
+  const modeLetters = $("#mode-letters");
+  if (modeSystem) modeSystem.onclick = () => setInputMode("system");
+  if (modeLetters) modeLetters.onclick = () => setInputMode("letters");
+  const keys = $("#keys");
+  if (keys) {
+    const rows = [
+      ["ten", "a b c d e f g h i j".split(" ")],
+      ["ten", "k l m n o p q r s t".split(" ")],
+      ["six", "u v w x y z".split(" ")],
+      ["accents", "à â ä ç é è ê ë î ï ô œ ù û ü".split(" ")],
+      ["tools", ["'", "-", "space", "delete"]]
+    ];
+    rows.forEach(([kind, row]) => {
+      const line = document.createElement("div");
+      line.className = "row " + kind;
+      row.forEach(ch => {
+        const b = document.createElement("button");
+        b.type = "button";
+        let action = () => insertChar(ch);
+        if (ch === "space") {
+          b.textContent = "空格";
+          b.className = "wide";
+          action = () => insertChar(" ");
+        } else if (ch === "delete") {
+          b.textContent = "删除";
+          b.className = "wide";
+          action = () => deleteChar();
+        } else {
+          b.textContent = ch;
+        }
+        b.addEventListener("pointerdown", (e) => {
+          e.preventDefault();
+          action();
+        });
+        line.appendChild(b);
+      });
+      keys.appendChild(line);
+    });
+  }
+  const hint = $("#hint");
+  if (hint) hint.onclick = () => {
+    session.hint = Math.min(2, (session.hint || 0) + 1);
+    render();
+  };
+  const fail = $("#fail");
+  if (fail) fail.onclick = () => resolve(false, $("#typed") ? $("#typed").value : "");
+  const submit = $("#submit");
+  if (submit) submit.onclick = () => submitAnswer();
+  const next = $("#next");
+  if (next) {
+    next.onclick = () => { session.revealed = false; session.hint = 0; session.index++; maybeGrammar(); render(); };
+    document.onkeydown = (e) => {
+      if (e.key === "Enter" && session && session.revealed && view === "study") {
+        e.preventDefault();
+        next.click();
+      }
+    };
+  } else {
+    document.onkeydown = null;
+  }
+  const hear = $("#hear");
+  if (hear) hear.onclick = () => {
+    const card = cards().find(c => c.id === session.queue[session.index]);
+    speak(card.fr);
+  };
+  const gram = $("#gram-go");
+  if (gram) gram.onclick = () => {
+    const card = cards().find(c => c.id === session.queue[session.index]);
+    S.seenGrammar[card.lesson] = true;
+    save(S);
+    session.phase = "card";
+    render();
+  };
+  const bookf = $("#bookf");
+  const lessonf = $("#lessonf");
+  const q = $("#q");
+  if (bookf) {
+    const sync = (keepFocus) => {
+      session = session || {};
+      session.bookFilter = bookf.value;
+      session.lessonFilter = lessonf.value;
+      session.filter = q.value;
+      view = "list";
+      render();
+      if (keepFocus) {
+        const again = document.getElementById("q");
+        if (again) {
+          again.focus();
+          const end = again.value.length;
+          again.setSelectionRange(end, end);
+        }
+      }
+    };
+    bookf.onchange = () => { lessonf.value = "all"; sync(false); };
+    lessonf.onchange = () => sync(false);
+    q.addEventListener("compositionstart", () => { q.dataset.composing = "1"; });
+    q.addEventListener("compositionend", () => {
+      delete q.dataset.composing;
+      sync(true);
+    });
+    q.addEventListener("input", () => {
+      if (q.dataset.composing) return;
+      sync(true);
+    });
+  }
+  const hour = $("#hour");
+  if (hour) hour.onchange = () => { S.hour = Math.max(6, Math.min(22, Number(hour.value) || 20)); save(S); };
+  const ics = $("#ics");
+  if (ics) ics.onclick = downloadIcs;
+  const exp = $("#export");
+  if (exp) exp.onclick = exportProgress;
+  const imp = $("#import");
+  if (imp) imp.onchange = importProgress;
+  const reset = $("#reset");
+  if (reset) reset.onclick = () => {
+    if (confirm("清空这台浏览器上的进度？词表还在。")) {
+      localStorage.removeItem(KEY);
+      S = load();
+      view = "home";
+      render();
+    }
+  };
+  const sp = $("#speak");
+  if (sp) sp.onclick = () => { S.speak = !S.speak; save(S); render(); };
+}
+
+function insertChar(ch) {
+  const input = $("#typed");
+  if (!input) return;
+  const a = input.selectionStart ?? input.value.length;
+  const b = input.selectionEnd ?? a;
+  input.value = input.value.slice(0, a) + ch + input.value.slice(b);
+  input.focus();
+  const pos = a + ch.length;
+  input.setSelectionRange(pos, pos);
+}
+
+function deleteChar() {
+  const input = $("#typed");
+  if (!input) return;
+  const a = input.selectionStart ?? input.value.length;
+  const b = input.selectionEnd ?? a;
+  if (a !== b) {
+    input.value = input.value.slice(0, a) + input.value.slice(b);
+    input.focus();
+    input.setSelectionRange(a, a);
+    return;
+  }
+  if (a === 0) return;
+  input.value = input.value.slice(0, a - 1) + input.value.slice(a);
+  input.focus();
+  input.setSelectionRange(a - 1, a - 1);
+}
+
+function beginSession(extra) {
+  const info = plan(S);
+  const built = buildQueue(S, info, extra);
+  if (!built.queue.length) return;
+  session = {
+    queue: built.queue,
+    index: 0,
+    phase: "card",
+    revealed: false,
+    hint: 0,
+    log: [],
+    reviewLeft: built.reviewLeft,
+    startedDue: info.dueCount
+  };
+  save(S);
+  view = "study";
+  maybeGrammar();
+  render();
+}
+
+function maybeGrammar() {
+  if (!session || session.index >= session.queue.length) return;
+  const card = cards().find(c => c.id === session.queue[session.index]);
+  const st = S.cards[card.id];
+  const isNew = !st || !st.intro;
+  if (isNew && !S.seenGrammar[card.lesson]) session.phase = "grammar";
+  else session.phase = "card";
+}
+
+function submitAnswer() {
+  const input = $("#typed");
+  if (!input || session.revealed) return;
+  const card = cards().find(c => c.id === session.queue[session.index]);
+  const expected = answerOf(card);
+  const alts = [expected].concat(card.alt || []);
+  const got = normalize(input.value);
+  const ok = alts.some(a => normalize(a) === got);
+  if (ok) {
+    const hard = (session.hint || 0) > 0;
+    resolve(true, input.value, hard ? "hard" : "good");
+    return;
+  }
+  const accentOnly = alts.some(a => stripAccents(normalize(a)) === stripAccents(got) && got.length > 0);
+  if (accentOnly && !session.accentTried) {
+    session.accentTried = true;
+    const line = $("#hintline");
+    if (line) line.textContent = "字母对了，音符不对。看清音符再写一次。";
+    return;
+  }
+  const articles = ["le ", "la ", "les ", "un ", "une ", "des ", "du ", "de la ", "de l'", "l'"];
+  if (articles.some(a => got.startsWith(a) && alts.some(x => normalize(x) === got.slice(a.length)))) {
+    const line = $("#hintline");
+    if (line) line.textContent = "不用冠词，只填这一个词。";
+    return;
+  }
+  resolve(false, input.value);
+}
+
+function resolve(ok, raw, result) {
+  const card = cards().find(c => c.id === session.queue[session.index]);
+  const st = cardState(S, card.id);
+  const today = dateKey();
+  const wasNew = !st.intro;
+  if (!st.intro) st.intro = today;
+  const gradeName = ok ? (result || "good") : "fail";
+  if (session.hint >= 2 && ok) grade(st, "hard");
+  else grade(st, gradeName);
+  const day = S.days[today] || { new: 0, review: 0, done: false };
+  if (wasNew) day.new++;
+  else day.review++;
+  S.days[today] = day;
+  save(S);
+  session.revealed = true;
+  session.lastOk = ok;
+  session.lastInput = raw;
+  session.accentTried = false;
+  session.log.push({ id: card.id, ok: session.lastOk });
+  if (!session.lastOk) {
+    session.retries = session.retries || {};
+    session.retries[card.id] = (session.retries[card.id] || 0) + 1;
+    const later = session.queue.slice(session.index + 1);
+    if (session.retries[card.id] <= 1 && !later.includes(card.id)) {
+      const againAt = Math.min(session.queue.length, session.index + 4);
+      session.queue.splice(againAt, 0, card.id);
+    }
+  }
+  if (S.speak) speak(card.fr);
+  if (session.index + 1 >= session.queue.length && session.lastOk) {
+    /* completion checked on next */
+  }
+  render();
+}
+
+function finishIfNeeded() {
+  if (!session) return;
+  if (session.index < session.queue.length) return;
+  const today = dateKey();
+  const info = plan(S);
+  const built = buildQueue(S, info, false);
+  if (built.newN === 0 && info.dueCount === 0) {
+    S.days[today] = S.days[today] || { new: 0, review: 0, done: false };
+    S.days[today].done = true;
+    save(S);
+  } else if ((session.log || []).length > 0 && built.newN === 0) {
+    S.days[today] = S.days[today] || { new: 0, review: 0, done: false };
+    S.days[today].done = true;
+    save(S);
+  }
+}
+
+const _render = render;
+render = function () {
+  if (view === "study" && session && session.index >= session.queue.length && session.phase !== "grammar") {
+    finishIfNeeded();
+    view = "done";
+  }
+  _render();
+};
+
+function downloadIcs() {
+  const hour = String(S.hour).padStart(2, "0");
+  const lines = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//fr-sentences//CN", "CALSCALE:GREGORIAN"];
+  for (let i = 0; i < COURSE_DAYS; i++) {
+    const key = addDays(S.started, i).replace(/-/g, "");
+    const stamp = key + "T" + hour + "0000";
+    const endH = String(Math.min(23, S.hour + 1)).padStart(2, "0");
+    lines.push("BEGIN:VEVENT");
+    lines.push("UID:fr-" + key + "@local");
+    lines.push("DTSTAMP:" + stamp);
+    lines.push("DTSTART:" + stamp);
+    lines.push("DTEND:" + key + "T" + endH + "0000");
+    lines.push("SUMMARY:法语句子背词");
+    lines.push("DESCRIPTION:打开法语句子背词，做完今天的句子。");
+    lines.push("END:VEVENT");
+  }
+  lines.push("END:VCALENDAR");
+  const blob = new Blob([lines.join("\r\n")], { type: "text/calendar" });
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = "法语句子背词_60天.ics";
+  a.click();
+}
+function exportProgress() {
+  const blob = new Blob([JSON.stringify(S, null, 2)], { type: "application/json" });
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = "法语句子背词_进度.json";
+  a.click();
+}
+function importProgress(e) {
+  const file = e.target.files && e.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = () => {
+    try {
+      const data = JSON.parse(reader.result);
+      if (!data || data.v !== 1 || !data.cards) throw new Error("bad");
+      S = data;
+      save(S);
+      view = "home";
+      render();
+    } catch (err) {
+      alert("这个文件不是进度备份。");
+    }
+  };
+  reader.readAsText(file);
+}
+
+render();
+</script>
+</body>
+</html>
